@@ -1,0 +1,68 @@
+.navLink {
+  position: relative;
+  display: inline-block;
+  color: var(--clr-black);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  overflow: hidden;
+
+  @media (max-width: 1024px) {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    background: linear-gradient(
+      to right,
+      var(--clr-red),
+      var(--clr-yellow),
+      var(--clr-green),
+      var(--clr-turq),
+      var(--clr-blue),
+      var(--clr-purple)
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; // Make the text color transparent
+    animation: moveRainbow 1.5s linear infinite;
+  }
+}
+
+@keyframes moveRainbow {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+// .navItem {
+//   display: flex;
+// }
+
+.dropdownMenu {
+  display: none; /* Hide dropdown by default */
+  position: absolute; /* Positioning the dropdown */
+  background-color: #fffdfa;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 1;
+  width: max-content;
+}
+
+.dropdownItem {
+  padding: 6px 16px;
+}
+
+.navItem:hover .dropdownMenu,
+.navItem:focus-within .dropdownMenu {
+  display: block; /* Show dropdown on hover or focus */
+}
+
+.arrowOpen {
+  transform: rotate(180deg); // Rotate the arrow 180 degrees
+  transition: transform 400ms; // Smooth transition for the rotation
+}

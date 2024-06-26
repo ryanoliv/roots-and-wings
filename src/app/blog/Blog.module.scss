@@ -1,0 +1,129 @@
+.blogCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(54, 52, 51, 0.2);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  transition: all 400ms ease;
+
+  &.latest {
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    box-shadow: none;
+
+    & .blogCardImage {
+      width: 600px;
+      height: 410px;
+
+      & > img {
+        border-radius: 1.4rem;
+        object-fit: cover;
+        border: 1px solid rgba(54, 52, 51, 0.2);
+      }
+    }
+
+    & .blogCardText {
+      background-color: transparent;
+      max-width: 600px;
+
+      & .blogCardTitle {
+        font-size: 2.2rem;
+      }
+    }
+
+    &:hover {
+      transform: translateY(0px);
+    }
+
+    & img {
+      border-radius: 1.4rem;
+    }
+  }
+
+  &:hover {
+    border-color: var(--hover-border-color, rgba(54, 52, 51, 0.5));
+    transform: translateY(-2px);
+  }
+
+  &Image {
+    position: relative;
+    width: 416px;
+    height: 300px;
+    overflow: hidden;
+
+    & > img {
+      border-radius: 1.4rem 1.4rem 0rem 0rem;
+    }
+  }
+
+  &Text {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.5rem;
+    flex-direction: column;
+    // gap: 0.75rem;
+    gap: var(--gap-sm);
+    border-radius: 0rem 0rem 1.5rem 1.5rem;
+    background: var(--card-bg);
+    max-width: 416px;
+  }
+
+  &Tag,
+  .latestPostTag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1.75rem;
+
+    font-size: 0.875rem;
+    line-height: 150%;
+  }
+
+  &Title {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 140%;
+  }
+
+  &Summary {
+    color: var(--clr-black-light);
+    line-height: 150%;
+  }
+
+  &Author {
+    font-size: 0.875rem;
+    font-weight: 800;
+    line-height: 150%;
+  }
+
+  &Date {
+    font-size: 0.875rem;
+    color: var(--clr-black-light);
+  }
+}
+
+.familyTag {
+  border: 2px solid var(--clr-red);
+  color: var(--clr-red);
+}
+
+.educatorsTag {
+  border: 2px solid var(--clr-blue);
+  color: var(--clr-blue);
+}
+
+.parentsTag {
+  border: 2px solid var(--clr-yellow);
+  color: var(--clr-yellow);
+}
+
+.communityTag {
+  border: 2px solid var(--clr-purp);
+  color: var(--clr-purp);
+}
+
+.latestPostTag {
+  border: 2px solid var(--clr-purple);
+  color: var(--clr-purple);
+}

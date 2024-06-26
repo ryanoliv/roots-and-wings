@@ -1,0 +1,73 @@
+.team {
+  &Img {
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border);
+  }
+
+  &Name {
+    font-size: 2rem;
+
+    &Small {
+      font-size: 1.5rem;
+    }
+  }
+
+  &Overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.1) 70%,
+      rgba(0, 0, 0, 0.5) 80%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+    z-index: 10;
+    // border-radius: 32px;
+
+    &Text,
+    &TextSmall {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translate(-50%, -10%);
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--gap-xs);
+      color: var(--clr-white);
+
+      z-index: 20;
+
+      //   &Small {
+      //     bottom: 0px;
+      //   }
+
+      &Title {
+        font-size: 1.75rem;
+        font-weight: bold;
+        line-height: 120%;
+
+        &Small {
+          font-size: 1.3rem;
+          font-weight: bold;
+          line-height: 120%;
+        }
+      }
+
+      &Subtitle {
+        font-size: 1.3rem;
+        line-height: 120%;
+
+        &Small {
+          font-size: 1rem;
+          line-height: 120%;
+        }
+      }
+    }
+  }
+}
