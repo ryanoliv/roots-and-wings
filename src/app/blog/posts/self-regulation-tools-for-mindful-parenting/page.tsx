@@ -1,8 +1,32 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { blogMetadata } from "../../blogMetadata";
 import ArticleCTA from "../../components/articlecta";
 
+const BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://www.rootsandwings.education/"
+    : "http://localhost:3000";
+
 export default function SelfRegulation() {
+  const post = blogMetadata.find(
+    (post) => post.slug === "self-regulation-tools-for-mindful-parenting"
+  );
+
+  if (!post) return <div>Post not found</div>;
+
+  const shareOnLinkedIn = () => {
+    const blogUrl = post.blogUrl;
+    const blogTitle = post.blogTitle;
+    const fullBlogUrl = `${BASE_URL}${blogUrl}`;
+    const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+      fullBlogUrl
+    )}&title=${encodeURIComponent(blogTitle)}`;
+    window.open(linkedInUrl, "_blank");
+  };
+
   return (
     <>
       <div className="container flex flex-col gap-xl mt-xl">
@@ -292,18 +316,14 @@ export default function SelfRegulation() {
               <div className="flex flex-col items-end gap-xs text-right">
                 <span>Share this post</span>
                 <div className="flex gap-sm">
-                  <Image
-                    src="/svgs/instagram-black.svg"
-                    alt="instagram icon"
-                    width={19}
-                    height={19}
-                  />
-                  <Image
-                    src="/svgs/linkedin-black.svg"
-                    alt="linkedin icon"
-                    width={17}
-                    height={21}
-                  />
+                  <button onClick={shareOnLinkedIn}>
+                    <Image
+                      src="/svgs/linkedin-black.svg"
+                      alt="linkedin icon"
+                      width={17}
+                      height={21}
+                    />
+                  </button>
                 </div>
               </div>
             </div>

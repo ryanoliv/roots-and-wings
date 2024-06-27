@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Nav.module.scss";
@@ -9,41 +9,6 @@ interface NavProps {
 
 export default function Nav({ isNavOpen }: NavProps) {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent): void {
-      // If the clicked target is not within the dropdown container, close the dropdown.
-      if (
-        !(event.target as HTMLElement).closest(`.${styles.dropdownContainer}`)
-      ) {
-        setIsDropdownVisible(false);
-      }
-    }
-
-    if (isDropdownVisible) {
-      // Bind the event listener
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-
-    // Clean up the event listener when the component unmounts or when the dropdown is closed.
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isDropdownVisible]); // Only re-run the effect if isDropdownVisible changes
-
-  // function toggleDropdown(): void {
-  //   setIsDropdownVisible(!isDropdownVisible);
-  // }
-
-  // Show dropdown on mouse enter
-  function handleMouseEnter() {
-    setIsDropdownVisible(true);
-  }
-
-  // hide dropdown on mouse leave
-  function handleMouseLeave() {
-    setIsDropdownVisible(false);
-  }
 
   const arrowClassName = isDropdownVisible ? styles.arrowOpen : "";
 
@@ -62,8 +27,8 @@ export default function Nav({ isNavOpen }: NavProps) {
         </li>
         <li
           className={`relative ${styles.navItem}`}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={() => setIsDropdownVisible(true)}
+          onMouseLeave={() => setIsDropdownVisible(false)}
         >
           <Link
             href="/our-programme"
@@ -82,7 +47,7 @@ export default function Nav({ isNavOpen }: NavProps) {
           {isDropdownVisible && (
             <ul className={styles.dropdownMenu}>
               <li className={styles.dropdownItem}>
-                <Link href="/our-programme" className={styles.navLink}>
+                <Link href="/our-programme#" className={styles.navLink}>
                   Programme Structure
                 </Link>
               </li>

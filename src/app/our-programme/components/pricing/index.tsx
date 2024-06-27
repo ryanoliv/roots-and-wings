@@ -72,7 +72,9 @@ export default function Pricing() {
               className="py-8 flex flex-col"
               style={{ borderBottom: "1px solid var(--border)" }}
             >
-              <h4 style={{ fontSize: "3.5rem" }}>£ {price.price}</h4>
+              <h4 className="font-bold" style={{ fontSize: "3.5rem" }}>
+                £ {price.price}
+              </h4>
               <span className="italic" style={{ fontSize: "0.8rem" }}>
                 All prices are VAT exclusive. <br /> Payment plans of 3–6 months
                 may be arranged upon request.

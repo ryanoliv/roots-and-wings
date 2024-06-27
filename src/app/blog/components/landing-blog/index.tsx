@@ -10,7 +10,7 @@ export default function LandingBlog() {
   return (
     <div className="container flex flex-col justify-center items-center gap-xl">
       <div className="flex flex-col gap-xs items-center">
-        <h2>Explore our blog</h2>
+        <h2>Explore Our Blog</h2>
         <p>
           Keep up to date with the latest in child development news and methods.
         </p>

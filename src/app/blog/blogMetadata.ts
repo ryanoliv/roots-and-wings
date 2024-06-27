@@ -10,6 +10,7 @@ export const blogMetadata: Array<{
   blogAuthor: string;
   blogDate: Date;
   blogTimeToRead: string;
+  blogUrl: string;
 }> = [
   {
     slug: "self-regulation-tools-for-mindful-parenting",
@@ -23,6 +24,7 @@ export const blogMetadata: Array<{
     blogAuthor: "Ally Boyes-Varley",
     blogDate: new Date("2024-04-09"),
     blogTimeToRead: "4",
+    blogUrl: '/blog/posts/self-regulation-tools-for-mindful-parenting'
   },
   {
     slug: "transforming-learning-through-joyful-engagement",
@@ -35,6 +37,7 @@ export const blogMetadata: Array<{
     blogAuthor: "Ally Boyes-Varley",
     blogDate: new Date("2024-04-16"),
     blogTimeToRead: "4",
+    blogUrl: '/blog/posts/transforming-learning-through-joyful-engagement'
   },
   {
     slug: "the-science-of-self-esteem-in-child-development",
@@ -47,5 +50,6 @@ export const blogMetadata: Array<{
     blogAuthor: "Ally Boyes-Varley",
     blogDate: new Date("2024-04-17"),
     blogTimeToRead: "2",
+    blogUrl: '/blog/posts/the-science-of-self-esteem-in-child-development'
   },
 ];

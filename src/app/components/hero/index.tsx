@@ -9,15 +9,16 @@ export default function Hero() {
         alt="roots and weings confetti pattern"
         priority
         fill
-        style={{
-          objectFit: "contain",
-          top: "15%",
-          opacity: 0.85,
-          zIndex: "-1",
-        }}
+        className="landing-hero-pattern"
+        // style={{
+        //   objectFit: "contain",
+        //   top: "15%",
+        //   opacity: 0.85,
+        //   zIndex: "-1",
+        // }}
       />
       <div className="flex flex-col gap-lg items-center">
-        <div className="flex flex-col gap-sm">
+        <div className="flex flex-col items-center gap-sm">
           <div className="flex flex-col">
             <h1 className={styles.mainTitle}>Welome to</h1>
             <Image
@@ -52,8 +53,8 @@ export default function Hero() {
             className="absolute bottom-0 right-0"
           />
         </div>
-        <button className="explore-more">Explore more</button>
-        <div className="absolute bottom-5 lg:bottom-0">
+        <p className="explore-more">Explore more</p>
+        <div className="hand-drawn-arrow-container absolute">
           <Image
             src="/svgs/drawn-arrow.svg"
             alt="hand drawn arrow"

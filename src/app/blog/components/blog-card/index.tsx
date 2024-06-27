@@ -2,27 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../../Blog.module.scss";
 import { BlogTagType, BlogCardData } from "../../types";
-import { formatDate } from "@/app/utils/blogUtils";
-
-function getTagStyles(tag: BlogTagType): {
-  tagClassName: string;
-  borderColor: string;
-} {
-  const styleMap: {
-    [key in BlogTagType]: { tagClassName: string; borderColor: string };
-  } = {
-    Family: { tagClassName: "familyTag", borderColor: "var(--clr-red)" },
-    Educators: { tagClassName: "educatorsTag", borderColor: "var(--clr-blue)" },
-    Parents: { tagClassName: "parentsTag", borderColor: "var(--clr-yellow)" },
-    Community: { tagClassName: "communityTag", borderColor: "var(--clr-purp)" },
-  };
-  return (
-    styleMap[tag] || {
-      tagClassName: "defaultTag",
-      borderColor: "var(--clr-default)",
-    }
-  );
-}
+import { formatDate, getTagStyles } from "@/app/utils/blogUtils";
 
 export default function BlogCard({
   slug,
@@ -52,6 +32,7 @@ export default function BlogCard({
               alt={alt}
               fill
               style={{ objectFit: "cover" }}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
           <div className={styles.blogCardText}>

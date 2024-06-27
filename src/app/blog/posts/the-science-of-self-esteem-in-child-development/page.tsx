@@ -1,8 +1,32 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { blogMetadata } from "../../blogMetadata";
 import ArticleCTA from "../../components/articlecta";
 
-export default function SelfRegulation() {
+const BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://www.rootsandwings.education/"
+    : "http://localhost:3000";
+
+export default function SelfEsteem() {
+  const post = blogMetadata.find(
+    (post) => post.slug === "the-science-of-self-esteem-in-child-development"
+  );
+
+  if (!post) return <div>Post not found</div>;
+
+  const shareOnLinkedIn = () => {
+    const blogUrl = post.blogUrl;
+    const blogTitle = post.blogTitle;
+    const fullBlogUrl = `${BASE_URL}${blogUrl}`;
+    const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+      fullBlogUrl
+    )}&title=${encodeURIComponent(blogTitle)}`;
+    window.open(linkedInUrl, "_blank");
+  };
+
   return (
     <>
       <div className="container flex flex-col gap-xl mt-xl">
@@ -183,22 +207,6 @@ export default function SelfRegulation() {
               Embrace the role of nurturing a confident, capable generation,
               ready to meet the world head-on.
             </p>
-            {/* <div className="flex flex-col gap-xs">
-              <h3>To recap, the most important takeaways include:</h3>
-              <ul className="list-disc ml-sm font-bold">
-                <li>
-                  Recognising the importance of self-awareness in
-                  self-regulation.
-                </li>
-                <li>
-                  Incorporating simple, mindful activities into everyday life.
-                </li>
-                <li>
-                  Overcoming common challenges with patience, support, and
-                  flexibility.
-                </li>
-              </ul>
-            </div> */}
           </div>
           <div className="flex flex-col gap-sm">
             <div
@@ -216,18 +224,14 @@ export default function SelfRegulation() {
               <div className="flex flex-col items-end gap-xs text-right">
                 <span>Share this post</span>
                 <div className="flex gap-sm">
-                  <Image
-                    src="/svgs/instagram-black.svg"
-                    alt="instagram icon"
-                    width={19}
-                    height={19}
-                  />
-                  <Image
-                    src="/svgs/linkedin-black.svg"
-                    alt="linkedin icon"
-                    width={17}
-                    height={21}
-                  />
+                  <button onClick={shareOnLinkedIn}>
+                    <Image
+                      src="/svgs/linkedin-black.svg"
+                      alt="linkedin icon"
+                      width={17}
+                      height={21}
+                    />
+                  </button>
                 </div>
               </div>
             </div>

@@ -56,7 +56,7 @@ export default function Home() {
           <section>
             <ProgrammeIntro />
           </section>
-          <section className="border-b">
+          <section className="border-b" id="testimonials">
             <Testimonials />
             <CTA />
           </section>

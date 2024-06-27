@@ -88,7 +88,7 @@ const cards: Card[] = [
     borderColor: "var(--clr-red)",
     linkTextBefore: "Read the ",
     linkText: "testimonials",
-    linkUrl: "/testimonials",
+    linkUrl: "/#testimonials",
     linkTextAfter: " for the proof in the pudding.",
   },
 ];
@@ -161,12 +161,12 @@ export default function UnveilTheMagic() {
                       <li key={itemIndex}>{item}</li>
                     ))}
                   </ul>
-                  {card.linkTextBefore && (
+                  {card.linkUrl && (
                     <p className="mt-md">
                       {card.linkTextBefore}
-                      <Link href="/" className="underline font-bold">
+                      <Link href={card.linkUrl} className="underline font-bold">
                         {card.linkText}
-                      </Link>{" "}
+                      </Link>
                       {card.linkTextAfter}
                     </p>
                   )}
