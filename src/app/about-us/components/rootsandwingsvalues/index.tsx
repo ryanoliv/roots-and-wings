@@ -27,8 +27,18 @@ export default function RootsAndWingsValues() {
         }}
       />
 
-      <div className="container flex gap-lg">
-        {/* <YouTubeVideo /> */}
+      <div className="container flex items-center justify-center gap-xl">
+        <div
+          className="flex flex-col gap-xs items-center"
+          style={{ flexBasis: "35%" }}
+        >
+          <div style={{ width: "100%" }}>
+            <YouTubeVideo />
+          </div>
+          <span className="italic" style={{ fontSize: "14px" }}>
+            Our idea Sprout, Ally.
+          </span>
+        </div>
         <div className="flex flex-col gap-sm">
           <h2>Our Roots & Wings Values</h2>
           <div className="flex flex-col gap-md">

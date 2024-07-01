@@ -3,20 +3,23 @@ export default function YouTubeVideo() {
     <div
       style={{
         position: "relative",
-        paddingBottom: "56.25%",
-        height: 0,
+        paddingBottom: "135%",
         overflow: "hidden",
+        width: "100%",
+        borderRadius: "24px",
+        border: "1px solid var(--border)",
+        boxShadow: "var(--card-shadow)",
       }}
     >
       <iframe
         style={{
           position: "absolute",
-          top: 0,
-          left: 0,
+          inset: "0",
           width: "100%",
           height: "100%",
+          objectFit: "cover",
         }}
-        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+        src="https://www.youtube.com/embed/IlSr-1xcKvs"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen

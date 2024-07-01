@@ -43,7 +43,10 @@ export default function MeetTheTeam() {
               and light as we revolutionise the world of education.
             </p>
           </div>
-          <Link href="https://linkedin.com" target="_blank">
+          <Link
+            href="https://linkedin.com/in/ally-boyes-varley-a56376105"
+            target="_blank"
+          >
             <Image
               src="/svgs/linkedin-rainbow.svg"
               alt="linkedin icon"
@@ -90,7 +93,10 @@ export default function MeetTheTeam() {
                 effective and engaging curriculum.
               </p>
             </div>
-            <Link href="https://linkedin.com" target="_blank">
+            <Link
+              href="https://linkedin.com/in/chanel-irvine-25a0148a"
+              target="_blank"
+            >
               <Image
                 src="/svgs/linkedin-rainbow.svg"
                 alt="linkedin icon"
@@ -134,7 +140,10 @@ export default function MeetTheTeam() {
                 hearts and minds of all who encounter them.
               </p>
             </div>
-            <Link href="https://linkedin.com" target="_blank">
+            <Link
+              href="https://linkedin.com/in/sarah-dyson-78881a19b"
+              target="_blank"
+            >
               <Image
                 src="/svgs/linkedin-rainbow.svg"
                 alt="linkedin icon"
@@ -177,7 +186,10 @@ export default function MeetTheTeam() {
                 experience, crafting it into a masterpiece of precision and joy.
               </p>
             </div>
-            <Link href="https://linkedin.com" target="_blank">
+            <Link
+              href="https://linkedin.com/in/cleo-vanessa-rowe-setz-900673149"
+              target="_blank"
+            >
               <Image
                 src="/svgs/linkedin-rainbow.svg"
                 alt="linkedin icon"
@@ -222,7 +234,10 @@ export default function MeetTheTeam() {
                 that resonate deeply and stir the imagination of every child.
               </p>
             </div>
-            <Link href="https://linkedin.com" target="_blank">
+            <Link
+              href="https://linkedin.com/in/stephen-hoffe-3aa15252"
+              target="_blank"
+            >
               <Image
                 src="/svgs/linkedin-rainbow.svg"
                 alt="linkedin icon"

@@ -29,8 +29,6 @@ export default function WhoWeAre() {
               alt="lions playing and laughing"
               width={495}
               height={362}
-              // fill
-              // style={{ objectFit: "cover" }}
             />
           </div>
         </div>
@@ -95,7 +93,7 @@ export default function WhoWeAre() {
                   <p style={{ maxWidth: "240px" }}>
                     Been trained in the{" "}
                     <Link
-                      href="https://pz.harvard.edu/projects/pedagogy-of-play"
+                      href="https://pz.harvard.edu/sites/default/files/PoP%20Book%203.27.23.pdf"
                       target="_blank"
                       className="underline"
                     >
@@ -103,7 +101,7 @@ export default function WhoWeAre() {
                     </Link>{" "}
                     and{" "}
                     <Link
-                      href="https://learningthroughplay.com/explore-the-research/the-scientific-case-for-learning-through-play"
+                      href="https://www.lego.com/cdn/cs/sustainability/assets/blt7aaec03836d94291/LtP_What_Is_It_-_Parents_PDF.pdf"
                       target="_blank"
                       className="underline"
                     >

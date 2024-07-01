@@ -386,7 +386,7 @@ p {
 /* MEDIA QUERIES */
 @media (max-width: 1728px) {
   .hand-drawn-arrow-container {
-    bottom: 8%;
+    bottom: 0%;
   }
 }
 

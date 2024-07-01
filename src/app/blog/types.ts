@@ -1,5 +1,7 @@
 export type BlogTagType = "Parents" | "Educators" | "Family" | "Community";
 
+
+
 export interface BlogCardData {
   slug: string;
   blogImg: string;
