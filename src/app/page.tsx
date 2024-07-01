@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import Loader from "./components/loader";
 import Head from "next/head";
 import Hero from "./components/hero";
@@ -30,13 +30,13 @@ const organizationSchema = {
 };
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 2000);
+  // }, []);
   return (
     <>
       <Head>
@@ -44,7 +44,7 @@ export default function Home() {
           {JSON.stringify(organizationSchema)}
         </script>
       </Head>
-      {isLoading && <Loader />}
+      {/* {isLoading && <Loader />}
       {!isLoading && (
         <>
           <section>
@@ -64,7 +64,23 @@ export default function Home() {
             <LandingBlog />
           </section>
         </>
-      )}
+      )} */}
+      <section>
+        <Hero />
+      </section>
+      <section>
+        <LearnPlayGrow />
+      </section>
+      <section>
+        <ProgrammeIntro />
+      </section>
+      <section className="border-b" id="testimonials">
+        <Testimonials />
+        <CTA />
+      </section>
+      <section>
+        <LandingBlog />
+      </section>
     </>
   );
 }

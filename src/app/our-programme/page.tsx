@@ -1,3 +1,4 @@
+import Image from "next/image";
 import CTA from "../components/cta";
 import Pricing from "./components/pricing";
 import UnveilTheMagic from "./components/unveilthemagic";

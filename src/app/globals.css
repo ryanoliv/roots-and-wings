@@ -383,6 +383,10 @@ p {
   color: var(--clr-black); /* Assuming --border is defined in your CSS */
 }
 
+.hand-drawn-arrow-container {
+  bottom: 5%;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 1728px) {
   .hand-drawn-arrow-container {

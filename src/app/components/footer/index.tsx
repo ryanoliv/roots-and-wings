@@ -73,6 +73,14 @@ export default function Footer() {
                   />
                 </div>
               </Link>
+              <span>
+                <Image
+                  src="/images/safeguarding.png"
+                  alt="safeguarding logo"
+                  width={36}
+                  height={36}
+                />
+              </span>
             </div>
             <div className="flex gap-sm">
               <Link href="/privacy-policy" className={styles.footerLegal}>
