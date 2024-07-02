@@ -7,6 +7,7 @@ import blogContents from "../../blogContents.json";
 import ArticleCTA from "../../components/articlecta";
 import { BlogCardData } from "../../types";
 import { formatDate, getTagStyles } from "@/app/utils/blogUtils";
+import LinkedInShareButton from "../../components/linkedinsharebutton";
 
 interface BlogSection {
   title: string;
@@ -41,6 +42,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
   const formattedDate = formatDate(post.blogDate);
   const { tagClassName } = getTagStyles(post.blogTag);
+  const shareUrl = `https://www.rootsandwings.education/blog/posts/${post.slug}`;
 
   return (
     <>
@@ -165,16 +167,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               </div>
               <div className="flex flex-col items-end gap-xs text-right">
                 <span>Share this post</span>
-                <div className="flex gap-sm">
-                  <button>
-                    <Image
-                      src="/svgs/linkedin-black.svg"
-                      alt="linkedin icon"
-                      width={17}
-                      height={21}
-                    />
-                  </button>
-                </div>
+                <LinkedInShareButton url={shareUrl} title={post.blogTitle} />
               </div>
             </div>
           </div>
