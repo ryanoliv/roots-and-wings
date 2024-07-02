@@ -1,3 +1,5 @@
+import CalendlyCTA from "@/app/components/calendlyCTA";
+import Separator from "@/app/components/separator";
 import Image from "next/image";
 
 const steps = [
@@ -85,7 +87,8 @@ export default function YourJourney() {
               mindfulness, self-regulation and play-based academic learning.
             </p>
           </div>
-          <button className="btn btn-primary">Book a Consultation</button>
+          {/* <button className="btn btn-primary">Book a Consultation</button> */}
+          <CalendlyCTA />
         </div>
         <div className="flex flex-col gap-lg">
           {steps.map((step, index) => (
@@ -130,14 +133,7 @@ export default function YourJourney() {
           ))}
         </div>
       </div>
-      <div className="relative separator-container">
-        <Image
-          src="/svgs/separator.svg"
-          alt="squiggle"
-          fill
-          style={{ objectFit: "cover" }}
-        />
-      </div>
+      <Separator />
     </div>
   );
 }

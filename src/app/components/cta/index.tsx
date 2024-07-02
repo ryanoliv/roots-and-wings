@@ -1,5 +1,6 @@
-import styles from "./CTA.module.scss";
 import Image from "next/image";
+import styles from "./CTA.module.scss";
+import CalendlyCTA from "../calendlyCTA";
 
 export default function CTA() {
   return (
@@ -43,7 +44,7 @@ export default function CTA() {
               Chat with our team and find out more about how Roots & Wings
               Tutoring can help your child and the whole family.
             </p>
-            <button className="btn btn-primary">Book a Consultation</button>
+            <CalendlyCTA />
           </div>
         </div>
       </div>

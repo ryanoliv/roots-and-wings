@@ -32,7 +32,7 @@ export default function Nav({ isNavOpen }: NavProps) {
         >
           <Link
             href="/our-programme"
-            className={`flex gap-xs items-center ${styles.navLink}`}
+            className={`gap-xs items-center ${styles.navLink}`}
           >
             Our Programme{" "}
             <div className={arrowClassName}>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import CalendlyCTA from "../calendlyCTA";
 import ToggleIcon from "./toggleIcon";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,7 +20,7 @@ export default function Header() {
         <Link href="/">
           <div className="primary-logo">
             <Image
-              src="/logos/primary-logo.svg"
+              src="/logos/logo-stacked.png"
               alt="Roots & Wings Logo"
               fill
               style={{ objectFit: "cover" }}
@@ -33,12 +34,14 @@ export default function Header() {
 
         <div className={`mobile-nav ${isNavOpen ? "open" : ""}`}>
           <Nav isNavOpen={isNavOpen} />
-          <button className="btn btn-primary">Book a Consultation</button>
+          {/* <button className="btn btn-primary">Book a Consultation</button> */}
+          <CalendlyCTA />
         </div>
 
         {!isNavOpen && (
           <div className="desktop-nav-cta">
-            <button className="btn btn-primary">Book a Consultation</button>
+            {/* <button className="btn btn-primary">Book a Consultation</button> */}
+            <CalendlyCTA />
           </div>
         )}
 

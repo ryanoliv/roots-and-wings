@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Separator from "../separator";
 
 export default function LearnPlayGrow() {
   return (
     <div className="flex flex-col pt-lg">
       <div className="container flex gap-lg items-center justify-center">
         <Image
-          src="/svgs/learnplaygrow.svg"
+          src="/images/learnplaygrow.png"
           alt="learn play grow graphic"
           width={468}
           height={342}
@@ -27,14 +28,7 @@ export default function LearnPlayGrow() {
           </p>
         </div>
       </div>
-      <div className="relative separator-container">
-        <Image
-          src="/svgs/separator.svg"
-          alt="squiggle"
-          fill
-          style={{ objectFit: "cover" }}
-        />
-      </div>
+      <Separator />
     </div>
   );
 }

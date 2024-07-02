@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Separator from "@/app/components/separator";
 
 interface Card {
   imgSrc: string;
@@ -176,14 +177,7 @@ export default function UnveilTheMagic() {
           ))}
         </div>
       </div>
-      <div className="relative separator-container">
-        <Image
-          src="/svgs/separator.svg"
-          alt="squiggle"
-          fill
-          style={{ objectFit: "cover" }}
-        />
-      </div>
+      <Separator />
     </div>
   );
 }

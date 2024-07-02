@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Separator from "../separator";
 
 export default function ProgrammeIntro() {
   return (
@@ -54,14 +55,7 @@ export default function ProgrammeIntro() {
           Explore Our Programme
         </Link>
       </div>
-      <div className="relative separator-container">
-        <Image
-          src="/svgs/separator.svg"
-          alt="squiggle"
-          fill
-          style={{ objectFit: "cover" }}
-        />
-      </div>
+      <Separator />
     </div>
   );
 }

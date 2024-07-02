@@ -1,3 +1,5 @@
+import CalendlyCTA from "@/app/components/calendlyCTA";
+import Separator from "@/app/components/separator";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,7 +23,8 @@ export default function WhoWeAre() {
                 learning.
               </p>
             </div>
-            <button className="btn btn-primary">Book a Consultation</button>
+            {/* <button className="btn btn-primary">Book a Consultation</button> */}
+            <CalendlyCTA />
           </div>
           <div className="relative">
             <Image
@@ -115,14 +118,7 @@ export default function WhoWeAre() {
           </div>
         </div>
       </div>
-      <div className="relative separator-container">
-        <Image
-          src="/svgs/separator.svg"
-          alt="squiggle"
-          fill
-          style={{ objectFit: "cover" }}
-        />
-      </div>
+      <Separator />
     </div>
   );
 }

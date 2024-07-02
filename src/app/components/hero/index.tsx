@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./Hero.module.scss";
+import CalendlyCTA from "../calendlyCTA";
 
 export default function Hero() {
   return (
@@ -20,14 +21,16 @@ export default function Hero() {
       <div className="flex flex-col gap-lg items-center">
         <div className="flex flex-col items-center gap-sm">
           <div className="flex flex-col">
-            <h1 className={styles.mainTitle}>Welome to</h1>
-            <Image
-              src="/images/hero-logo.png"
-              alt="roots & wings alternative logo"
-              width={632}
-              height={118}
-            />
-            <h1 className={styles.mainTitle}>Tutoring</h1>
+            {/* <h1 className={styles.mainTitle}>Welome to</h1> */}
+            <h1>
+              <Image
+                src="/images/hero-logo.png"
+                alt="roots & wings alternative logo"
+                width={632}
+                height={118}
+              />
+            </h1>
+            {/* <h1 className={styles.mainTitle}>Tutoring</h1> */}
           </div>
           <p className={styles.mainSubTitle}>
             What if the world of education valued academic success and emotional
@@ -44,7 +47,8 @@ export default function Hero() {
             height={19}
             className="absolute top-0 left-0"
           />
-          <button className="btn btn-primary">Book a Consultation</button>
+          {/* <button className="btn btn-primary">Book a Consultation</button> */}
+          <CalendlyCTA />
           <Image
             src="/svgs/btn-accent-bottom.svg"
             alt="accent lines"

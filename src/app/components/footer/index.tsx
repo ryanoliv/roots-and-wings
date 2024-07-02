@@ -13,7 +13,7 @@ export default function Footer() {
               <Link href="/">
                 <div className="primary-logo">
                   <Image
-                    src="/logos/primary-logo.svg"
+                    src="/logos/logo-stacked.png"
                     alt="Roots & Wings Logo"
                     fill
                     style={{ objectFit: "cover" }}
