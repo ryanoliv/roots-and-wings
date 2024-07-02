@@ -4,7 +4,7 @@ export default function Separator() {
   return (
     <div className="separator-container">
       <Image
-        src="/svgs/separator.svg"
+        src="/images/separator.png"
         alt="squiggle"
         fill
         style={{ objectFit: "cover" }}

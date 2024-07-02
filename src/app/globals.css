@@ -170,8 +170,8 @@ p {
 .separator-container {
   position: relative;
   width: 100%;
-  height: 365px;
-  margin-top: -35px;
+  height: 300px;
+  /* margin-top: -35px; */
 }
 
 .primary-logo {
