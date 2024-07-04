@@ -7,6 +7,10 @@
   font-size: 0.8rem;
   transition: border 400ms ease;
 
+  @media (max-width: 768px) {
+    min-width: 320px;
+  }
+
   &::placeholder {
     color: var(--clr-white);
     opacity: 0.75;

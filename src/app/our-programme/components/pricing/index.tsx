@@ -1,3 +1,4 @@
+import styles from "../../OurProgramme.module.scss";
 import Image from "next/image";
 
 const pricing = [
@@ -42,14 +43,14 @@ export default function Pricing() {
         alt="whale"
         width={473}
         height={260}
-        style={{ position: "absolute", top: "-50px", left: "-30px" }}
+        className="whale"
       />
       <Image
         src="/images/characters/giraffe.png"
         alt="giraffe"
         width={243}
         height={323}
-        style={{ position: "absolute", bottom: "0px", right: "0px" }}
+        className="giraffe"
       />
       <div className="container flex flex-col gap-xl items-center">
         <div className="flex flex-col items-center">
@@ -61,35 +62,27 @@ export default function Pricing() {
             prices resonate with the value of a tailored education.
           </p>
         </div>
-        <div className="flex gap-md">
+        <div className="flex flex-col md:flex-row gap-md md:gap-xs xl:gap-md">
           {pricing.map((price, index) => (
             <div
               key={index}
-              className="flex flex-col p-12"
+              className={`${styles.PricingCard} flex flex-col p-6 xl:p-12`}
               style={{
-                border: "1px solid var(--border)",
                 backgroundColor: price.bgColor,
                 color: price.textColor,
-                boxShadow: "var(--card-shadow)",
-                maxWidth: "480px",
-                borderRadius: "24px",
               }}
             >
               <div
-                className="pb-8"
+                className="pb-4 xl:pb-8"
                 style={{ borderBottom: "1px solid var(--border)" }}
               >
-                <h3 className="font-bold" style={{ fontSize: "1.125rem" }}>
-                  {price.type}
-                </h3>
+                <h3 className={styles.PricingCardType}>{price.type}</h3>
               </div>
               <div
                 className="py-8 flex flex-col"
                 style={{ borderBottom: "1px solid var(--border)" }}
               >
-                <h4 className="font-bold" style={{ fontSize: "3.5rem" }}>
-                  £ {price.price}
-                </h4>
+                <h4 className={styles.PricingCardPrice}>£ {price.price}</h4>
                 <span className="italic" style={{ fontSize: "0.8rem" }}>
                   All prices are VAT exclusive. <br /> Payment plans of 3–6
                   months may be arranged upon request.

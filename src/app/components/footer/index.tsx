@@ -42,7 +42,7 @@ export default function Footer() {
             </div>
             <div className={styles.line}></div>
           </div>
-          <div className="flex gap-xs items-center justify-between w-full">
+          <div className="flex flex-col-reverse md:flex-row gap-md md:gap-xs items-center justify-between w-full">
             <span className={styles.footerCopywrite}>
               &copy; 2024 Roots & Wings. All Rights Reserved.
             </span>

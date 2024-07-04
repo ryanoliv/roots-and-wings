@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import styles from "./Blog.module.scss";
 import BlogCard from "./components/blog-card";
 import { blogMetadata } from "./blogMetadata";
 import { sortBlogs } from "../utils/blogUtils";
@@ -24,7 +25,7 @@ export default function BlogPage() {
     <section className="pt-xl">
       <div className="container flex flex-col gap-xl">
         <div className="flex flex-col">
-          <h1 style={{ fontSize: "3.75rem" }}>
+          <h1 className={styles.blogPageH1}>
             Beyond the Books: The Roots & Wings Blog
           </h1>
           <p>We post new articles every month, so stay tuned.</p>
@@ -35,7 +36,7 @@ export default function BlogPage() {
           </div>
         )}
         <div className="flex flex-col gap-md">
-          <div className="flex gap-sm blog-filters">
+          <div className="flex gap-xs md:gap-sm blog-filters">
             {tags.map((tag) => (
               <button
                 key={tag}
@@ -46,7 +47,7 @@ export default function BlogPage() {
               </button>
             ))}
           </div>
-          <div className="flex gap-md">
+          <div className="flex flex-col md:flex-row gap-md md:gap-xs xl:gap-md">
             {filteredBlogs.map((blog, index) => (
               <BlogCard key={index} {...blog} />
             ))}

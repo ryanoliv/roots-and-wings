@@ -1,3 +1,22 @@
+.blogPageH1 {
+  font-size: 3.75rem;
+
+  @media (max-width: 450px) {
+    font-size: 2.5rem;
+  }
+}
+
+.blogPostImgContainer {
+  position: relative;
+  max-width: 1094px;
+  height: 600px;
+
+  @media (max-width: 450px) {
+    max-width: 100%;
+    height: 400px;
+  }
+}
+
 .blogCard {
   display: flex;
   flex-direction: column;
@@ -13,9 +32,23 @@
     border: none;
     box-shadow: none;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: var(--gap-md);
+    }
+
+    @media (max-width: 450px) {
+      gap: var(--gap-xs);
+    }
+
     & .blogCardImage {
       width: 600px;
       height: 410px;
+
+      @media (max-width: 450px) {
+        width: 390px;
+        height: 410px;
+      }
 
       & > img {
         border-radius: 1.4rem;
@@ -30,6 +63,10 @@
 
       & .blogCardTitle {
         font-size: 2.2rem;
+
+        @media (max-width: 450px) {
+          font-size: 1.6rem;
+        }
       }
     }
 
@@ -49,9 +86,15 @@
 
   &Image {
     position: relative;
-    width: 416px;
+    // width: 416px;
+    width: 100%;
+    // max-width: 416px;
     height: 300px;
     overflow: hidden;
+
+    @media (max-width: 1024px) {
+      height: 235px;
+    }
 
     & > img {
       border-radius: 1.4rem 1.4rem 0rem 0rem;
@@ -68,6 +111,14 @@
     border-radius: 0rem 0rem 1.5rem 1.5rem;
     background: var(--card-bg);
     max-width: 416px;
+
+    @media (max-width: 1024px) {
+      padding: 0.8rem;
+    }
+
+    @media (max-width: 450px) {
+      padding: 1.5rem;
+    }
   }
 
   &Tag,
@@ -77,6 +128,10 @@
 
     font-size: 0.875rem;
     line-height: 150%;
+
+    // @media (max-width: 1024px) {
+    //   font-size: 0.7rem;
+    // }
   }
 
   &Title {
@@ -84,11 +139,31 @@
     font-style: normal;
     font-weight: 800;
     line-height: 140%;
+
+    @media (max-width: 1280px) {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 1.3rem;
+    }
   }
 
   &Summary {
     color: var(--clr-black-light);
     line-height: 150%;
+
+    @media (max-width: 1024px) {
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 1rem;
+    }
   }
 
   &Author {
@@ -126,4 +201,9 @@
 .latestPostTag {
   border: 2px solid var(--clr-purple);
   color: var(--clr-purple);
+}
+
+.blogSectionSubtitle {
+  max-width: 270px;
+  text-align: center;
 }

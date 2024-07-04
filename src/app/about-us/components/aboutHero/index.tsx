@@ -4,15 +4,30 @@ import Image from "next/image";
 export default function AboutHero() {
   return (
     <div className="relative">
-      <Image
+      <div className={styles.aboutHeroPatternContainer}>
+        <picture>
+          <source
+            srcSet="/images/about-pattern.png"
+            media="(min-width: 450px)"
+          />
+          <source
+            srcSet="/images/about-pattern-mobile.png"
+            media="(max-width: 449px)"
+          />
+          <img
+            src="/images/about-pattern.png"
+            alt="roots and wings confetti pattern"
+          />
+        </picture>
+      </div>
+      {/* <Image
         src="/images/about-pattern.png"
         alt="roots and wings pattern"
         fill
-        style={{ objectFit: "cover", opacity: "0.9" }}
-      />
-      <div className="min-h-screen flex flex-col justify-center items-center gap-xl">
+      /> */}
+      <div className="min-h-screen flex flex-col justify-center items-center gap-md">
         <h1 className={styles.h1}>
-          <span className={styles.span}>Say Hello</span> <br /> to a journey of
+          <span className={styles.span}>Say Hello</span> to a journey of
           self-discovery!
         </h1>
         <Image

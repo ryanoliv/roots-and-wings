@@ -13,7 +13,7 @@ export default function ProgrammeIntro() {
             empowerment, following a four-step approach:
           </p>
         </div>
-        <div className="flex justify-center gap-doublexl">
+        <div className="flex flex-col md:flex-row justify-center gap-xl xl:gap-doublexl">
           <div className="flex flex-col gap-sm items-center">
             <h3>Connect</h3>
             <Image

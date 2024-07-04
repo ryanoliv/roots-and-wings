@@ -12,18 +12,36 @@
   background: var(--card-bg);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
   height: 296px;
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+    max-width: 500px;
+    height: 266px;
+    justify-content: space-between;
+    // gap: 1.5rem;
+  }
+
+  @media (max-width: 450px) {
+    max-width: 380px;
+  }
 }
 
 .testimonialQuote {
-  // font-family: var(--font-body);
   font-size: 1.625rem;
   line-height: 150%;
-
   display: -webkit-box;
   -webkit-line-clamp: 4; /* Number of lines you want to display */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 1.2rem;
+  }
 }
 
 .testimonialName {

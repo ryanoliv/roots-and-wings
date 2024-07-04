@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import styles from "../../OurProgramme.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import Separator from "@/app/components/separator";
@@ -113,16 +114,13 @@ export default function UnveilTheMagic() {
             and Benefits for Your Child.
           </p>
         </div>
-        <div className="flex gap-md items-start flex-wrap">
+        <div className="flex gap-md justify-center items-start flex-wrap">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="flex flex-col gap-sm p-12"
+              className={styles.unveilTheMagicCard}
               style={{
-                maxWidth: "640px",
-                backgroundColor: "var(--card-bg)",
                 border: `1px solid ${card.borderColor}`,
-                borderRadius: "24px",
                 boxShadow: "var(--card-shadow)",
               }}
             >
@@ -133,7 +131,7 @@ export default function UnveilTheMagic() {
                 height={card.imgHeight}
               />
               <div className="flex flex-col">
-                <h3 style={{ fontSize: "1.75rem" }}>{card.title}</h3>
+                <h3 className={styles.unveilTheMagicCardTitle}>{card.title}</h3>
                 <p>{card.description}</p>
               </div>
               <button

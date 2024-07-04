@@ -5,29 +5,41 @@ import CalendlyCTA from "../calendlyCTA";
 export default function Hero() {
   return (
     <div className="hero-container relative min-h-screen flex items-center justify-center">
-      <Image
+      <div className="landing-hero-pattern-container">
+        <picture>
+          <source
+            srcSet="/images/hero-pattern.png"
+            media="(min-width: 1025px)"
+          />
+          <source
+            srcSet="/images/hero-pattern-tablet.png"
+            media="(max-width: 1024px)"
+          />
+          <img
+            src="/images/hero-pattern.png"
+            alt="roots and wings confetti pattern"
+          />
+        </picture>
+      </div>
+      {/* <Image
         src="/images/hero-pattern.png"
-        alt="roots and weings confetti pattern"
+        alt="roots and wings confetti pattern"
         priority
         fill
         className="landing-hero-pattern"
-        // style={{
-        //   objectFit: "contain",
-        //   top: "15%",
-        //   opacity: 0.85,
-        //   zIndex: "-1",
-        // }}
-      />
+      /> */}
       <div className="flex flex-col gap-lg items-center">
         <div className="flex flex-col items-center gap-sm">
           <div className="flex flex-col">
             {/* <h1 className={styles.mainTitle}>Welome to</h1> */}
-            <h1>
+            <h1 className="hero-logo-container">
               <Image
                 src="/images/hero-logo.png"
                 alt="roots & wings alternative logo"
-                width={632}
-                height={118}
+                // width={632}
+                // height={118}
+                fill
+                style={{ objectFit: "cover" }}
               />
             </h1>
             {/* <h1 className={styles.mainTitle}>Tutoring</h1> */}
@@ -47,7 +59,6 @@ export default function Hero() {
             height={19}
             className="absolute top-0 left-0"
           />
-          {/* <button className="btn btn-primary">Book a Consultation</button> */}
           <CalendlyCTA />
           <Image
             src="/svgs/btn-accent-bottom.svg"

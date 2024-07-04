@@ -46,7 +46,10 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <div className="container flex flex-col gap-xl mt-xl">
+      <div
+        className="container flex flex-col gap-xl mt-xl"
+        style={{ width: "fit-content", marginInline: "auto" }}
+      >
         <Link href="/blog" className="flex gap-xs">
           <Image
             src="/svgs/drop-down-arrow.svg"
@@ -61,13 +64,10 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           <span className={`${styles.blogCardTag} ${styles[tagClassName]}`}>
             {post.blogTag}
           </span>
-          <h1 style={{ fontSize: "3.75rem" }}>{post.blogTitle}</h1>
+          <h1 className={styles.blogPageH1}>{post.blogTitle}</h1>
         </div>
         <div className="flex flex-col gap-md">
-          <div
-            className="relative"
-            style={{ width: "1094px", height: "600px" }}
-          >
+          <div className={styles.blogPostImgContainer}>
             <Image
               src={post.blogImg}
               alt={post.alt}
@@ -148,14 +148,25 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                     </svg>
                   </span>
                 </Link> */}
-                <span className="underline">
+
+                <div
+                  style={{
+                    width: "2.25rem",
+                    height: "2.25rem",
+                    borderRadius: "50%",
+                    border: "0.5px solid var(--clr-black)",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="size-6"
+                    className="size-4"
                   >
                     <path
                       strokeLinecap="round"
@@ -163,7 +174,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                       d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
                     />
                   </svg>
-                </span>
+                </div>
               </div>
               <div className="flex flex-col items-end gap-xs text-right">
                 <span>Share this post</span>

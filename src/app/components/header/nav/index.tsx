@@ -4,11 +4,17 @@ import Image from "next/image";
 import styles from "./Nav.module.scss";
 
 interface NavProps {
-  isNavOpen: boolean;
+  isNavOpen?: boolean;
+  setIsNavOpen?: (isOpen: boolean) => void;
 }
 
-export default function Nav({ isNavOpen }: NavProps) {
+export default function Nav({ isNavOpen, setIsNavOpen }: NavProps) {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+
+  function closeNav() {
+    setIsDropdownVisible(false);
+    if (setIsNavOpen) setIsNavOpen(false);
+  }
 
   const arrowClassName = isDropdownVisible ? styles.arrowOpen : "";
 
@@ -16,12 +22,12 @@ export default function Nav({ isNavOpen }: NavProps) {
     <nav className="flex">
       <ul className="flex items-center gap-xl">
         <li className={`flex ${styles.navItem}`}>
-          <Link href="/about-us" className={styles.navLink}>
+          <Link href="/about-us" className={styles.navLink} onClick={closeNav}>
             About Us
           </Link>
         </li>
         <li className={`flex ${styles.navItem}`}>
-          <Link href="/blog" className={styles.navLink}>
+          <Link href="/blog" className={styles.navLink} onClick={closeNav}>
             Blog
           </Link>
         </li>
@@ -33,9 +39,10 @@ export default function Nav({ isNavOpen }: NavProps) {
           <Link
             href="/our-programme"
             className={`gap-xs items-center ${styles.navLink}`}
+            onClick={closeNav}
           >
             Our Programme{" "}
-            <div className={arrowClassName}>
+            <div className={`drop-down-arrow ${arrowClassName}`}>
               <Image
                 src="/svgs/drop-down-arrow.svg"
                 alt="drop down arrow"

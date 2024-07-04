@@ -15,7 +15,7 @@ export default function ArticleCTA() {
         style={{ backgroundColor: "var(--clr-blue)" }}
       >
         <div
-          className="px-28 py-12 flex flex-col gap-sm relative"
+          className="px-10 md:px-28 py-12 flex flex-col gap-sm relative"
           style={{
             backgroundColor: "var(--clr-white)",
             borderRadius: "18px",

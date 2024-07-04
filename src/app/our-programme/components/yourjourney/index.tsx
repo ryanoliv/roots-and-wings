@@ -1,3 +1,4 @@
+import styles from "../../OurProgramme.module.scss";
 import CalendlyCTA from "@/app/components/calendlyCTA";
 import Separator from "@/app/components/separator";
 import Image from "next/image";
@@ -71,11 +72,8 @@ const steps = [
 export default function YourJourney() {
   return (
     <div className="flex flex-col pt-lg">
-      <div className="container flex justify-between w-full items-start">
-        <div
-          className="flex flex-col gap-md items-start"
-          style={{ position: "sticky", top: "208px" }}
-        >
+      <div className="container flex flex-col md:flex-row w-full justify-between gap-lg md:gap-md items-start">
+        <div className={styles.yourJourneyStickyContainer}>
           <div className="flex flex-col gap-xs">
             <h1>Your Journey</h1>
             <p style={{ maxWidth: "505px" }}>
@@ -94,7 +92,7 @@ export default function YourJourney() {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="flex gap-lg"
+              className="flex gap-xs xl:gap-lg"
               style={{ maxWidth: "685px" }}
             >
               <div className="flex flex-col gap-xs items-center">
@@ -122,6 +120,7 @@ export default function YourJourney() {
                       fontFamily: "var(--font-body)",
                       fontSize: "1.7rem",
                       fontWeight: "bold",
+                      textAlign: "start",
                     }}
                   >
                     {step.title}

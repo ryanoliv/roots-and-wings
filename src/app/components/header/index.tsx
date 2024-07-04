@@ -29,18 +29,16 @@ export default function Header() {
         </Link>
 
         <div className="desktop-nav">
-          <Nav isNavOpen={isNavOpen} />
+          <Nav />
         </div>
 
         <div className={`mobile-nav ${isNavOpen ? "open" : ""}`}>
-          <Nav isNavOpen={isNavOpen} />
-          {/* <button className="btn btn-primary">Book a Consultation</button> */}
+          <Nav isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
           <CalendlyCTA />
         </div>
 
         {!isNavOpen && (
           <div className="desktop-nav-cta">
-            {/* <button className="btn btn-primary">Book a Consultation</button> */}
             <CalendlyCTA />
           </div>
         )}

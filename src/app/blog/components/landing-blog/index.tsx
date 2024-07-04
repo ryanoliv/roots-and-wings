@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "../../Blog.module.scss";
 import { blogMetadata } from "../../blogMetadata";
 import { sortBlogs } from "@/app/utils/blogUtils";
 import BlogCard from "../blog-card";
@@ -11,11 +12,11 @@ export default function LandingBlog() {
     <div className="container flex flex-col justify-center items-center gap-xl">
       <div className="flex flex-col gap-xs items-center">
         <h2>Explore Our Blog</h2>
-        <p>
+        <p className={styles.blogSectionSubtitle}>
           Keep up to date with the latest in child development news and methods.
         </p>
       </div>
-      <div className="flex gap-sm justify-center">
+      <div className="flex gap-md md:gap-xs xl:gap-sm flex-col md:flex-row justify-center">
         {sortedBlogs.map((card, index) => (
           <BlogCard
             key={index}

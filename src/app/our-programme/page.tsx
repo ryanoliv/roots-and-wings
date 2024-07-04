@@ -7,7 +7,7 @@ import YourJourney from "./components/yourjourney";
 export default function OurProgramme() {
   return (
     <>
-      <section className="pt-xl">
+      <section className="pt-sm md:pt-xl">
         <YourJourney />
       </section>
       <section id="our-method">

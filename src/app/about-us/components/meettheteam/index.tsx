@@ -1,6 +1,6 @@
+import styles from "./MeetTheTeam.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./MeetTheTeam.module.scss";
 
 export default function MeetTheTeam() {
   return (
@@ -9,7 +9,7 @@ export default function MeetTheTeam() {
         <h2>Meet The Team</h2>
         <p>Meet the passionate individuals behind Roots & Wings Tutoring.</p>
       </div>
-      <div className="flex gap-md">
+      <div className="flex flex-col md:flex-row gap-md">
         <div className="relative">
           <Image
             src="/images/team/team-ally.jpg"
@@ -57,7 +57,7 @@ export default function MeetTheTeam() {
         </div>
       </div>
 
-      <div className="flex gap-md">
+      <div className="flex gap-md md:gap-xs xl:gap-md flex-wrap xl:flex-nowrap justify-evenly">
         <div className="flex flex-col gap-sm">
           <div className="relative">
             <Image
