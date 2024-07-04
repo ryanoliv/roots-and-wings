@@ -21,10 +21,14 @@
 
 .aboutHeroPatternContainer {
   position: absolute;
-  top: -7%;
+  top: -10%;
   right: 0;
   opacity: 0.85;
   object-fit: cover;
+
+  @media (max-width: 1024px) {
+    top: -5%;
+  }
 
   @media (max-width: 450px) {
     top: 0;

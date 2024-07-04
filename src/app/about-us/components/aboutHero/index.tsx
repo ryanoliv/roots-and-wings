@@ -3,16 +3,16 @@ import Image from "next/image";
 
 export default function AboutHero() {
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <div className={styles.aboutHeroPatternContainer}>
         <picture>
           <source
-            srcSet="/images/about-pattern.png"
-            media="(min-width: 450px)"
+            srcSet="/images/about-pattern-mobile.png"
+            media="(max-width: 450px)"
           />
           <source
-            srcSet="/images/about-pattern-mobile.png"
-            media="(max-width: 449px)"
+            srcSet="/images/about-pattern-tablet.png"
+            media="(max-width: 1024px)"
           />
           <img
             src="/images/about-pattern.png"

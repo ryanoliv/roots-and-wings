@@ -1,16 +1,14 @@
-.yourJourney {
-  &StickyContainer {
-    position: sticky;
-    top: 208px;
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-md);
-    align-items: flex-start;
+.yourJourneyStickyContainer {
+  position: sticky;
+  top: 208px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  align-items: flex-start;
 
-    @media (max-width: 450px) {
-      position: relative;
-      top: 0;
-    }
+  @media (max-width: 450px) {
+    position: relative;
+    top: 0;
   }
 }
 

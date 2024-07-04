@@ -554,6 +554,10 @@ p {
   .whale {
     display: none;
   }
+
+  .ally-shapes {
+    display: none;
+  }
 }
 
 @media (max-width: 450px) {

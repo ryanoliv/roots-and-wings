@@ -72,7 +72,7 @@ const steps = [
 export default function YourJourney() {
   return (
     <div className="flex flex-col pt-lg">
-      <div className="container flex flex-col md:flex-row w-full justify-between gap-lg md:gap-md items-start">
+      <div className="container flex flex-col md:flex-row w-full justify-between gap-xl md:gap-md items-start">
         <div className={styles.yourJourneyStickyContainer}>
           <div className="flex flex-col gap-xs">
             <h1>Your Journey</h1>

@@ -204,6 +204,10 @@
 }
 
 .blogSectionSubtitle {
-  max-width: 270px;
+  max-width: 100%;
   text-align: center;
+
+  @media (max-width: 450px) {
+    max-width: 270px;
+  }
 }

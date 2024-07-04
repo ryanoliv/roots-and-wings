@@ -30,7 +30,14 @@ export default function MeetTheTeam() {
             </span>
           </div>
         </div>
-        <div className="flex flex-col gap-md justify-center">
+        <div className="flex flex-col gap-md justify-center relative">
+          <Image
+            src="/images/team/ally-shapes.png"
+            alt="arty shapes"
+            width={132}
+            height={108}
+            className="ally-shapes"
+          />
           <div className="flex flex-col">
             <h3 className={styles.teamName}>Ally</h3>
             <p style={{ maxWidth: "530px" }}>

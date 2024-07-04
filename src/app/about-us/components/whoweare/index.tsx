@@ -46,7 +46,7 @@ export default function WhoWeAre() {
                   width={80}
                   height={78}
                 />
-                <div className="flex flex-col gap-xs items-center">
+                <div className="flex flex-col gap-xs">
                   <h4 className="font-bold text-center md:text-start">
                     Experience
                   </h4>
