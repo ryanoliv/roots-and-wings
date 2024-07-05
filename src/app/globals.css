@@ -604,6 +604,10 @@ p {
     text-align: center;
   }
 
+  .consent-msg {
+    left: 4.5rem;
+  }
+
   .hero-logo {
     padding-inline: 0;
   }
@@ -624,9 +628,9 @@ p {
     max-width: 100%;
   }
 
-  .slick-list {
+  /* .slick-list {
     overflow: hidden !important;
-  }
+  } */
 
   .slick-list,
   .slick-track {

@@ -24,8 +24,12 @@
     &List {
       display: flex;
       flex-direction: column;
-      // gap: 0.75rem;
       gap: var(--gap-xs);
+
+      @media (max-width: 450px) {
+        flex-direction: row;
+        gap: var(--gap-md);
+      }
 
       & > a > li {
         color: #f7f2ec;
@@ -44,6 +48,10 @@
 
     @media (max-width: 768px) {
       font-size: 1.1rem;
+    }
+
+    @media (max-width: 450px) {
+      text-align: center;
     }
   }
 

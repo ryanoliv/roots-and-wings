@@ -9,7 +9,7 @@ export default function Footer() {
       <div className={styles.footerContainer}>
         <div className="flex flex-col gap-sm items-start w-full">
           <div className="flex flex-col items-start gap-xl w-full">
-            <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-sm md:gap-0 w-full">
+            <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-lg md:gap-0 w-full">
               <Link href="/">
                 <div className="primary-logo">
                   <Image
@@ -20,7 +20,7 @@ export default function Footer() {
                   />
                 </div>
               </Link>
-              <div className="flex flex-col gap-xs">
+              <div className="flex flex-col gap-xs items-center">
                 <p className={styles.footerLinkTitle}>Contact us</p>
                 <div className="flex flex-col gap-xs">
                   <ul className={styles.footerLinkList}>
