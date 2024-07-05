@@ -1,15 +1,26 @@
-.team {
+.teamMember {
+  &Container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+    max-width: 320px;
+
+    @media (max-width: 1280px) {
+      max-width: 280px;
+    }
+
+    @media (max-width: 450px) {
+      max-width: 100%;
+    }
+  }
+
   &Img {
     box-shadow: var(--card-shadow);
     border: 1px solid var(--border);
-  }
+    border-radius: 24px;
 
-  &Name {
-    font-size: 2rem;
-
-    @media (max-width: 450px) {
-      font-size: 1.5rem;
-      text-align: center;
+    &Container {
+      position: relative;
     }
   }
 
@@ -26,7 +37,7 @@
       rgba(0, 0, 0, 0.9) 100%
     );
     z-index: 10;
-    // border-radius: 32px;
+    border-radius: 24px;
 
     &Text {
       position: absolute;
@@ -44,23 +55,27 @@
       z-index: 20;
 
       &Title {
-        font-size: 1.75rem;
+        font-size: 1.4rem;
         font-weight: bold;
         line-height: 120%;
-
-        @media (max-width: 450px) {
-          font-size: 1.4rem;
-        }
       }
 
-      &Subtitle {
-        font-size: 1.3rem;
+      &Role {
+        font-size: 1rem;
         line-height: 120%;
-
-        @media (max-width: 450px) {
-          font-size: 1rem;
-        }
       }
     }
   }
+
+  &Name {
+    font-size: 1.5rem;
+
+    @media (max-width: 450px) {
+      text-align: center;
+    }
+  }
+
+  // &Description {
+  //   max-width: 300px;
+  // }
 }

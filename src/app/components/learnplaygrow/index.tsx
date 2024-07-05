@@ -14,12 +14,7 @@ export default function LearnPlayGrow() {
             className="px-4 md:px-0"
           />
           <div className="flex flex-col gap-xs">
-            <h2
-              className="text-center xl:text-left"
-              style={{ fontSize: "2.625rem" }}
-            >
-              We Believe in Children
-            </h2>
+            <h2 className="learnplaygrow-title">We Believe in Children</h2>
             <p className="webelieveinchildren-text">
               Children who understand their thoughts and emotions will know
               their self-worth, for life. <br />

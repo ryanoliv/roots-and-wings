@@ -21,18 +21,11 @@ export default function Hero() {
           />
         </picture>
       </div>
-      {/* <Image
-        src="/images/hero-pattern.png"
-        alt="roots and wings confetti pattern"
-        priority
-        fill
-        className="landing-hero-pattern"
-      /> */}
+
       <div className="flex flex-col gap-lg items-center">
         <div className="flex flex-col items-center gap-sm">
           <div className="flex flex-col">
-            {/* <h1 className={styles.mainTitle}>Welome to</h1> */}
-            <h1 className="hero-logo-container">
+            {/* <h1 className="hero-logo-container">
               <Image
                 src="/images/hero-logo.png"
                 alt="roots & wings alternative logo"
@@ -41,8 +34,16 @@ export default function Hero() {
                 fill
                 style={{ objectFit: "cover" }}
               />
+            </h1> */}
+            <h1>
+              <Image
+                src="/images/hero-logo.png"
+                alt="roots & wings alternative logo"
+                width={632}
+                height={118}
+                className="hero-logo"
+              />
             </h1>
-            {/* <h1 className={styles.mainTitle}>Tutoring</h1> */}
           </div>
           <p className={styles.mainSubTitle}>
             What if the world of education valued academic success and emotional
