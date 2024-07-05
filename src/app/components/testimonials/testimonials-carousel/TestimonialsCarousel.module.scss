@@ -11,18 +11,24 @@
   border: 1px solid rgba(54, 52, 51, 0.2);
   background: var(--card-bg);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
-  height: 296px;
+  min-height: 296px;
 
   @media (max-width: 768px) {
     padding: 2rem;
     max-width: 500px;
-    height: 266px;
+    min-height: 266px;
     justify-content: space-between;
     // gap: 1.5rem;
   }
 
   @media (max-width: 450px) {
     max-width: 380px;
+  }
+
+  @media (max-width: 390px) {
+    max-width: 358px;
+    padding: 1.5rem;
+    min-height: 246px;
   }
 }
 
@@ -41,6 +47,10 @@
 
   @media (max-width: 450px) {
     font-size: 1.2rem;
+  }
+
+  @media (max-width: 390px) {
+    font-size: 1.1rem;
   }
 }
 

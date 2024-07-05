@@ -47,7 +47,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   return (
     <>
       <div
-        className="container flex flex-col gap-xl mt-xl"
+        className="container flex flex-col gap-lg md:gap-xl mt-xl"
         style={{ width: "fit-content", marginInline: "auto" }}
       >
         <Link href="/blog" className="flex gap-xs">
@@ -80,18 +80,24 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               }}
             />
           </div>
-          <div className="flex gap-lg">
+          <div className="flex gap-0 justify-between md:gap-lg">
             <div className="flex flex-col gap-xs">
-              <span>Written by</span>
-              <span className="font-bold">{post.blogAuthor}</span>
+              <span className="blog-details-title">Written by</span>
+              <span className="font-bold blog-details-subtitle">
+                {post.blogAuthor}
+              </span>
             </div>
             <div className="flex flex-col gap-xs">
-              <span>Published On</span>
-              <span className="font-bold">{formattedDate}</span>
+              <span className="blog-details-title">Published On</span>
+              <span className="font-bold blog-details-subtitle">
+                {formattedDate}
+              </span>
             </div>
             <div className="flex flex-col gap-xs">
-              <span>Read Time</span>
-              <span className="font-bold">{post.blogTimeToRead} minutes</span>
+              <span className="blog-details-title">Read Time</span>
+              <span className="font-bold blog-details-subtitle">
+                {post.blogTimeToRead} minutes
+              </span>
             </div>
           </div>
         </div>
@@ -129,7 +135,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             ></div>
             <div className="flex justify-between w-full">
               <div className="flex flex-col gap-xs items-start">
-                <span>Download our free resource</span>
+                <span>Download our resource</span>
                 {/* <Link href="/path/to/resource.pdf" download="ResourceFile.pdf">
                   <span className="underline">
                     <svg

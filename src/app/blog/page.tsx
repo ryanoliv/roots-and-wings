@@ -36,7 +36,7 @@ export default function BlogPage() {
           </div>
         )}
         <div className="flex flex-col gap-md">
-          <div className="flex gap-xs md:gap-sm blog-filters">
+          <div className="flex gap-0 md:gap-sm blog-filters">
             {tags.map((tag) => (
               <button
                 key={tag}

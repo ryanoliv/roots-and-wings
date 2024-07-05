@@ -5,6 +5,10 @@
 
 .span {
   font-size: var(--font-size-h1);
+
+  @media (max-width: 450px) {
+    font-size: 4.2rem;
+  }
 }
 
 .h1 {

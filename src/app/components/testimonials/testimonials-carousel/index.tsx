@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./TestimonialsCarousel.module.scss";
 import "slick-carousel/slick/slick.css";
@@ -101,6 +102,27 @@ function PrevArrow(props: any) {
 }
 
 export default function TestimonialsCarousel() {
+  const [centerPadding, setCenterPadding] = useState("50px");
+  const [variableWidth, setVariableWidth] = useState(true);
+
+  useEffect(() => {
+    function updateSettings() {
+      const screenwidth = window.innerWidth;
+      if (screenwidth < 768) {
+        setCenterPadding("10px");
+        setVariableWidth(false);
+      } else {
+        setCenterPadding("50px");
+        setVariableWidth(true);
+      }
+    }
+
+    updateSettings();
+    window.addEventListener("resize", updateSettings);
+
+    return () => window.removeEventListener("resize", updateSettings);
+  }, []);
+
   const carouselSettings = {
     dots: true,
     infinite: true,
@@ -109,11 +131,11 @@ export default function TestimonialsCarousel() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    centerPadding: "50px",
+    centerPadding: centerPadding,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     adaptiveHeight: false,
-    variableWidth: true,
+    variableWidth: variableWidth,
     centerMode: true,
   };
   return (

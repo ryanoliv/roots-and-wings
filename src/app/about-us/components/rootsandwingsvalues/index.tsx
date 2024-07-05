@@ -15,6 +15,7 @@ export default function RootsAndWingsValues() {
           width: "115%",
           position: "absolute",
         }}
+        className="values-squiggle"
       />
 
       <div className="container flex flex-col xl:flex-row items-center justify-center gap-md xl:gap-xl">
@@ -42,10 +43,7 @@ export default function RootsAndWingsValues() {
                 />
                 <div className="gap-xs">
                   <h3 className="text-center md:text-left">Empowerment</h3>
-                  <p
-                    className="text-center md:text-left"
-                    style={{ maxWidth: "255px" }}
-                  >
+                  <p className="text-center md:text-left values-subtext">
                     Giving each child the confidence to activate their full
                     potential, fostering resilience in learning and in life.
                   </p>
@@ -60,10 +58,7 @@ export default function RootsAndWingsValues() {
                 />
                 <div className="gap-xs">
                   <h3 className="text-center md:text-left">Compassion</h3>
-                  <p
-                    className="text-center md:text-left"
-                    style={{ maxWidth: "255px" }}
-                  >
+                  <p className="text-center md:text-left values-subtext">
                     Empathetically addressing individual needs and challenges,
                     creating a nurturing environment where self-worth can
                     flourish.
@@ -81,10 +76,7 @@ export default function RootsAndWingsValues() {
                 />
                 <div className="gap-xs">
                   <h3 className="text-center md:text-left">Community</h3>
-                  <p
-                    className="text-center md:text-left"
-                    style={{ maxWidth: "255px" }}
-                  >
+                  <p className="text-center md:text-left values-subtext">
                     Honouring and supporting the adult&apos;s role in empowering
                     their child, be it an educator, parent, carer or healthcare
                     professional.
@@ -100,10 +92,7 @@ export default function RootsAndWingsValues() {
                 />
                 <div className="gap-xs">
                   <h3 className="text-center md:text-left">Impact</h3>
-                  <p
-                    className="text-center md:text-left"
-                    style={{ maxWidth: "255px" }}
-                  >
+                  <p className="text-center md:text-left values-subtext">
                     Guiding the thinkers, dreamers and do-gooders of tomorrow,
                     today. We teach skills that will set the foundations for
                     life.

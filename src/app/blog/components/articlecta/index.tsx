@@ -1,29 +1,18 @@
+import styles from "./ArticleCTA.module.scss";
 import MailchimpForm from "@/app/components/MailchimpForm";
 import Image from "next/image";
 
 export default function ArticleCTA() {
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <Image
         src="/svgs/cta-squiggle.svg"
         alt="squiggle"
         fill
         style={{ objectFit: "cover" }}
       />
-      <div
-        className="py-doublexl flex items-center justify-center"
-        style={{ backgroundColor: "var(--clr-blue)" }}
-      >
-        <div
-          className="px-10 md:px-28 py-12 flex flex-col gap-sm relative"
-          style={{
-            backgroundColor: "var(--clr-white)",
-            borderRadius: "18px",
-            border: "1px solid var(--border)",
-            boxShadow: "var(--card-shadow)",
-            zIndex: "5",
-          }}
-        >
+      <div className={styles.articleCTAContainer}>
+        <div className={styles.articleCTACard}>
           <Image
             src="/svgs/cta-shape-top-small.svg"
             alt="shape 1"

@@ -7,7 +7,9 @@ export default function MeetTheTeam() {
     <div className="container flex flex-col gap-xl items-center">
       <div className="flex flex-col items-center">
         <h2>Meet The Team</h2>
-        <p>Meet the passionate individuals behind Roots & Wings Tutoring.</p>
+        <p className="text-center md:text-start">
+          Meet the passionate individuals behind Roots & Wings Tutoring.
+        </p>
       </div>
       <div className="flex flex-col md:flex-row gap-md">
         <div className="relative">

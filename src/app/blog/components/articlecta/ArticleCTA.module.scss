@@ -1,0 +1,31 @@
+.articleCTA {
+  &Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--gap-2xl);
+    background-color: var(--clr-blue);
+  }
+
+  &Card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+    padding-block: 3.5rem;
+    padding-inline: 7rem;
+    background-color: var(--clr-white);
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    box-shadow: var(--card-shadow);
+    z-index: 5;
+
+    @media (max-width: 450px) {
+      padding-inline: 2rem;
+    }
+
+    @media (max-width: 390px) {
+      padding-inline: 1.5rem;
+    }
+  }
+}

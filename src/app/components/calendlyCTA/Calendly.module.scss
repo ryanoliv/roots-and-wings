@@ -28,5 +28,10 @@
     height: 90%;
     background: white;
     z-index: 2;
+
+    @media (max-width: 450px) {
+      height: 70%;
+      width: 90%;
+    }
   }
 }
