@@ -18,26 +18,16 @@ export default function ArticleCTA() {
             alt="shape 1"
             width={89}
             height={57}
-            style={{
-              position: "absolute",
-              top: "-35px",
-              left: "-36px",
-            }}
+            className={styles.articleCTAShapeTop}
           />
           <Image
             src="/svgs/cta-shape-bottom-small.svg"
             alt="shape 2"
             width={82}
             height={106}
-            style={{
-              position: "absolute",
-              bottom: "-33px",
-              right: "-36px",
-            }}
+            className={styles.articleCTAShapeBot}
           />
-          <p className="font-bold" style={{ fontSize: "1.2rem" }}>
-            Subscribe to our newsletter
-          </p>
+          <p className={styles.articleCTATitle}>Subscribe to our newsletter</p>
           <MailchimpForm
             inputStyle={{
               border: "1px solid var(--clr-black)",

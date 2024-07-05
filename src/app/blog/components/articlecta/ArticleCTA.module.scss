@@ -27,5 +27,38 @@
     @media (max-width: 390px) {
       padding-inline: 1.5rem;
     }
+
+    @media (max-width: 375px) {
+      padding-inline: 1rem;
+      padding-block: 2.75rem;
+    }
+  }
+
+  &Title {
+    font-weight: bold;
+    font-size: 1.2rem;
+
+    @media (max-width: 375px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  &Shape {
+    &Top {
+      position: absolute;
+      top: -35px;
+      left: -36px;
+    }
+
+    &Bot {
+      position: absolute;
+      bottom: -33px;
+      right: -36px;
+
+      @media (max-width: 375px) {
+        right: -40px;
+        bottom: -45px;
+      }
+    }
   }
 }

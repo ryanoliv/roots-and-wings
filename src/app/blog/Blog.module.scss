@@ -8,6 +8,13 @@
   @media (max-width: 390px) {
     font-size: 2.4rem;
   }
+
+  @media (max-width: 375px) {
+    font-size: 2.3rem;
+  }
+}
+
+.blog-filters {
 }
 
 .blogPostImgContainer {
@@ -64,6 +71,11 @@
         height: 295px;
       }
 
+      @media (max-width: 375px) {
+        width: 343px;
+        height: 279px;
+      }
+
       & > img {
         border-radius: 1.4rem;
         object-fit: cover;
@@ -74,6 +86,10 @@
     & .blogCardText {
       background-color: transparent;
       max-width: 600px;
+
+      @media (max-width: 375px) {
+        padding: 1.5rem 0;
+      }
 
       & .blogCardTitle {
         font-size: 2.2rem;
@@ -124,7 +140,6 @@
     align-items: flex-start;
     padding: 1.5rem;
     flex-direction: column;
-    // gap: 0.75rem;
     gap: var(--gap-sm);
     border-radius: 0rem 0rem 1.5rem 1.5rem;
     background: var(--card-bg);
