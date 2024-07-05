@@ -76,6 +76,10 @@
     justify-content: center;
     align-items: center;
     transition: all 400ms ease;
+
+    @media (max-width: 450px) {
+      border: 1px solid var(--clr-white);
+    }
   }
 }
 

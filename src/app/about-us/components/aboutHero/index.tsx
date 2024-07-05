@@ -25,7 +25,7 @@ export default function AboutHero() {
         alt="roots and wings pattern"
         fill
       /> */}
-      <div className="min-h-screen flex flex-col justify-center items-center gap-md">
+      <div className="min-h-screen flex flex-col justify-center items-center gap-xs md:gap-md">
         <h1 className={styles.h1}>
           <span className={styles.span}>Say Hello</span> to a journey of
           self-discovery!

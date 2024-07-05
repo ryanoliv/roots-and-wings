@@ -81,7 +81,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               }}
             />
           </div>
-          <div className="flex gap-0 justify-between md:gap-lg">
+          <div className="flex gap-0 justify-between md:justify-start md:gap-lg lg:gap-xl">
             <div className="flex flex-col gap-xs">
               <span className="blog-details-title">Written by</span>
               <span className="font-bold blog-details-subtitle">

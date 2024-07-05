@@ -103,7 +103,7 @@ export default function UnveilTheMagic() {
   };
 
   return (
-    <div className="flex flex-col pt-lg">
+    <div className="flex flex-col pt-0 md:pt-lg">
       <div className="container flex flex-col gap-xl">
         <div className="flex flex-col items-center">
           <h2>Let&apos;s Unveil The Magic</h2>

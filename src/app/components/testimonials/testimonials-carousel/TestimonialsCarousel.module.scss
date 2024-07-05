@@ -30,13 +30,17 @@
     padding: 1.5rem;
     min-height: 246px;
   }
+
+  @media (max-width: 375px) {
+    width: 100%;
+  }
 }
 
 .testimonialQuote {
   font-size: 1.625rem;
   line-height: 150%;
   display: -webkit-box;
-  -webkit-line-clamp: 4; /* Number of lines you want to display */
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -47,6 +51,7 @@
 
   @media (max-width: 450px) {
     font-size: 1.2rem;
+    -webkit-line-clamp: 5;
   }
 
   @media (max-width: 390px) {
@@ -86,6 +91,11 @@
     rgba(247, 242, 236, 0) 85.1%,
     #f7f2ec 100%
   );
+  opacity: 1;
+
+  @media (max-width: 375px) {
+    opacity: 0;
+  }
 }
 
 .callieKite {
