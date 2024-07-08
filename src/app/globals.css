@@ -635,6 +635,7 @@ p {
   .landing-hero-pattern-container {
     top: unset;
     bottom: 0;
+    left: 0;
   }
 
   .hand-drawn-arrow-container {
@@ -714,5 +715,9 @@ p {
 
   .explore-more {
     display: none;
+  }
+
+  .landing-hero-pattern-container {
+    bottom: -5%;
   }
 }
