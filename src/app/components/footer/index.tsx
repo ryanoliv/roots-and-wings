@@ -20,7 +20,7 @@ export default function Footer() {
                   />
                 </div>
               </Link>
-              <div className="flex flex-col gap-xs items-center">
+              <div className="flex flex-col gap-xs items-center md:items-start">
                 <p className={styles.footerLinkTitle}>Contact us</p>
                 <div className="flex flex-col gap-xs">
                   <ul className={styles.footerLinkList}>

@@ -70,16 +70,28 @@ html {
   scroll-behavior: smooth;
 }
 
-html,
+/* html,
 body {
   overflow-x: hidden;
-}
+} */
 
 body {
   color: var(--clr-black);
   background-color: var(--clr-white);
   line-height: 1.8;
   font-family: var(--font-body);
+
+  /* transition */
+  opacity: 1;
+  transition-property: opacity, background-color, transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.page-transition {
+  opacity: 0;
+  background-color: var(--clr-white);
+  transform: translateY(10px);
 }
 
 header {
