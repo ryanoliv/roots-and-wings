@@ -74,7 +74,7 @@ export default function YourJourney() {
     <div className="flex flex-col pt-lg">
       <div className="container flex flex-col md:flex-row w-full justify-between gap-xl md:gap-md items-start">
         <div className={styles.yourJourneyStickyContainer}>
-          <div className="flex flex-col gap-xs">
+          <div className="flex flex-col gap-xs text-center md:text-start">
             <h1>Your Journey</h1>
             <p style={{ maxWidth: "505px" }}>
               Guiding you on each step of our 12-week journey together. Our
@@ -87,7 +87,7 @@ export default function YourJourney() {
           </div>
           <CalendlyCTA />
         </div>
-        <div className="flex flex-col gap-lg">
+        <div className="flex flex-col gap-lg text-center md:text-start">
           {steps.map((step, index) => (
             <div
               key={index}
@@ -115,11 +115,11 @@ export default function YourJourney() {
                 </span>
                 <div className="flex flex-col gap-xs">
                   <h2
+                    className="text-center md:text-start"
                     style={{
                       fontFamily: "var(--font-body)",
                       fontSize: "1.7rem",
                       fontWeight: "bold",
-                      textAlign: "start",
                     }}
                   >
                     {step.title}

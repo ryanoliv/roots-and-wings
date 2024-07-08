@@ -42,6 +42,10 @@
     top: -8%;
   }
 
+  @media (max-width: 744px) {
+    top: 0%;
+  }
+
   @media (max-width: 450px) {
     top: 0;
   }

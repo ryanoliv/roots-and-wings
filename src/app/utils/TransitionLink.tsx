@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 interface TransitionLinkProps extends LinkProps {
   children: ReactNode;
   href: string;
-  className: string;
+  className?: string;
 }
 
 function sleep(ms: number): Promise<void> {
@@ -26,7 +26,7 @@ export default function TransitionLink({
     e.preventDefault();
     const body = document.querySelector("body");
     body?.classList.add("page-transition");
-    await sleep(400);
+    await sleep(750);
     router.push(href);
     body?.classList.remove("page-transition");
   }

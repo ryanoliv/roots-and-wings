@@ -49,7 +49,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
     <>
       <div
         className="container flex flex-col gap-lg md:gap-xl mt-xl"
-        style={{ width: "fit-content", marginInline: "auto" }}
+        style={{ maxWidth: "750px", marginInline: "auto" }}
       >
         <Link href="/blog" className="flex gap-xs">
           <Image
@@ -102,11 +102,11 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             </div>
           </div>
         </div>
-        <div style={{ maxWidth: "750px", marginInline: "auto" }}>
+        <div>
           {content && (
             <article className="flex flex-col gap-xl mb-xl">
               {content.sections.map((section, index) => (
-                <div key={index} className="flex flex-col gap-xs">
+                <div key={index} className="flex flex-col gap-xs text-center">
                   <h2>{section.title}</h2>
                   {section.content.map((item, itemIndex) =>
                     typeof item === "string" ? (

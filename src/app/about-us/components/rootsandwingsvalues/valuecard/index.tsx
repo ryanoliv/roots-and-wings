@@ -22,12 +22,12 @@ export default function ValueCard({
   return (
     <div
       className="flex flex-col gap-sm items-center md:items-start values-card"
-      style={{
-        border: `1px solid ${borderColor}`,
-        backgroundColor: "var(--clr-white)",
-        borderRadius: "18px",
-        boxShadow: "var(--card-shadow)",
-      }}
+      // style={{
+      //   border: `1px solid ${borderColor}`,
+      //   backgroundColor: "var(--clr-white)",
+      //   borderRadius: "18px",
+      //   boxShadow: "var(--card-shadow)",
+      // }}
     >
       <Image src={src} alt={alt} width={width} height={height} />
       <div className="gap-xs">

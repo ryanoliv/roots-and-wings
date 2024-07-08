@@ -83,7 +83,10 @@ export default function Pricing() {
                 style={{ borderBottom: "1px solid var(--border)" }}
               >
                 <h4 className={styles.PricingCardPrice}>£ {price.price}</h4>
-                <span className="italic" style={{ fontSize: "0.8rem" }}>
+                <span
+                  className="italic text-center md:text-start"
+                  style={{ fontSize: "0.8rem" }}
+                >
                   All prices are VAT exclusive. <br /> Payment plans of 3–6
                   months may be arranged upon request.
                 </span>

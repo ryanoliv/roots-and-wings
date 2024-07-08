@@ -75,7 +75,11 @@
     }
   }
 
-  // &Description {
-  //   max-width: 300px;
-  // }
+  &Description {
+    text-align: start;
+
+    @media (max-width: 450px) {
+      text-align: center;
+    }
+  }
 }

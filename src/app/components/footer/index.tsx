@@ -11,14 +11,12 @@ export default function Footer() {
           <div className="flex flex-col items-start gap-xl w-full">
             <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-lg md:gap-0 w-full">
               <Link href="/">
-                <div className="primary-logo">
-                  <Image
-                    src="/logos/logo-stacked.png"
-                    alt="Roots & Wings Logo"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
+                <Image
+                  src="/logos/logo-stacked.png"
+                  alt="Roots & Wings Logo"
+                  width={110}
+                  height={61}
+                />
               </Link>
               <div className="flex flex-col gap-xs items-center md:items-start">
                 <p className={styles.footerLinkTitle}>Contact us</p>

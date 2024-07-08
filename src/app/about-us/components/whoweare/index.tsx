@@ -14,7 +14,10 @@ export default function WhoWeAre() {
           <div className="flex flex-col gap-lg items-center md:items-start">
             <div className="flex flex-col">
               <h2>Who We Are</h2>
-              <p style={{ maxWidth: "580px" }}>
+              <p
+                className="text-center md:text-left"
+                style={{ maxWidth: "580px" }}
+              >
                 Our mission is to empower children to understand their thoughts
                 and emotions, know their self-worth and approach learning with
                 resilience, so that they can thrive in learning and in life. Our

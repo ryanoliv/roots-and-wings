@@ -44,7 +44,10 @@ export default function MeetTheTeam() {
           />
           <div className="flex flex-col">
             <h3 className={styles.teamName}>Ally</h3>
-            <p style={{ maxWidth: "530px" }}>
+            <p
+              className="text-center md:text-left"
+              style={{ maxWidth: "530px" }}
+            >
               Meet Idea Sprout, the chameleon at the heart of Roots & Wings
               Tutoring. Ally&apos;s extensive knowledge allows the team to adapt
               and change to any challenge. Like the colours of a

@@ -28,7 +28,9 @@ export default function BlogPage() {
           <h1 className={styles.blogPageH1}>
             Beyond the Books: The Roots & Wings Blog
           </h1>
-          <p>We post new articles every month, so stay tuned.</p>
+          <p className="text-center md:text-left">
+            We post new articles every month, so stay tuned.
+          </p>
         </div>
         {latestBlog && (
           <div className="latest-blog-post">

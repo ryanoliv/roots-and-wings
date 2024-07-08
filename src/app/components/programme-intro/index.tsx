@@ -21,6 +21,7 @@ export default function ProgrammeIntro() {
               alt="connect"
               width={138}
               height={142}
+              className="px-6 md:px-0"
             />
           </div>
           <div className="flex flex-col gap-sm items-center">
@@ -30,6 +31,7 @@ export default function ProgrammeIntro() {
               alt="empower"
               width={151}
               height={151}
+              className="px-6 md:px-0"
             />
           </div>
           <div className="flex flex-col gap-sm items-center">
@@ -39,6 +41,7 @@ export default function ProgrammeIntro() {
               alt="enhance"
               width={145}
               height={148}
+              className="px-6 md:px-0"
             />
           </div>
           <div className="flex flex-col gap-sm items-center">
@@ -48,6 +51,7 @@ export default function ProgrammeIntro() {
               alt="cultivate"
               width={155}
               height={151}
+              className="px-6 md:px-0"
             />
           </div>
         </div>

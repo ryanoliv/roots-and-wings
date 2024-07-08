@@ -6,6 +6,7 @@ import ToggleIcon from "./toggleIcon";
 import Image from "next/image";
 import Link from "next/link";
 import Nav from "./nav";
+// import TransitionLink from "@/app/utils/TransitionLink";
 
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -17,15 +18,21 @@ export default function Header() {
   return (
     <div className="py-8">
       <div className="nav-container flex justify-between items-center">
+        {/* <TransitionLink href="/">
+          <Image
+            src="/logos/logo-stacked.png"
+            alt="Roots & Wings Logo"
+            width={110}
+            height={61}
+          />
+        </TransitionLink> */}
         <Link href="/">
-          <div className="primary-logo">
-            <Image
-              src="/logos/logo-stacked.png"
-              alt="Roots & Wings Logo"
-              fill
-              style={{ objectFit: "cover" }}
-            />
-          </div>
+          <Image
+            src="/logos/logo-stacked.png"
+            alt="Roots & Wings Logo"
+            width={110}
+            height={61}
+          />
         </Link>
 
         <div className="desktop-nav">

@@ -82,7 +82,7 @@ body {
   font-family: var(--font-body);
 
   /* transition */
-  opacity: 1;
+  /* opacity: 1; */
   transition-property: opacity, background-color, transform;
   transition-timing-function: ease-in-out;
   transition-duration: 500ms;
@@ -199,11 +199,11 @@ p {
   margin-top: -35px;
 }
 
-.primary-logo {
+/* .primary-logo {
   position: relative;
   width: 110px;
   height: 61px;
-}
+} */
 
 .btn {
   position: relative;
@@ -633,7 +633,8 @@ p {
   }
 
   .landing-hero-pattern-container {
-    display: none;
+    top: unset;
+    bottom: 0;
   }
 
   .hand-drawn-arrow-container {
@@ -646,6 +647,7 @@ p {
 
   .webelieveinchildren-text {
     max-width: 100%;
+    text-align: center;
   }
 
   /* .slick-list {

@@ -8,13 +8,18 @@ export default function Hero() {
       <div className="landing-hero-pattern-container">
         <picture>
           <source
-            srcSet="/images/hero-pattern.png"
-            media="(min-width: 1025px)"
+            srcSet="/images/hero-pattern-mobile.png"
+            media="(max-width: 768px)"
           />
           <source
             srcSet="/images/hero-pattern-tablet.png"
             media="(max-width: 1024px)"
           />
+          <source
+            srcSet="/images/hero-pattern.png"
+            media="(min-width: 1025px)"
+          />
+
           <img
             src="/images/hero-pattern.png"
             alt="roots and wings confetti pattern"
@@ -36,13 +41,14 @@ export default function Hero() {
               />
             </h1> */}
             <h1>
-              <Image
+              {/* <Image
                 src="/images/hero-logo.png"
                 alt="roots & wings alternative logo"
                 width={632}
                 height={118}
                 className="hero-logo"
-              />
+              /> */}{" "}
+              Welcome!
             </h1>
           </div>
           <p className={styles.mainSubTitle}>
@@ -60,7 +66,8 @@ export default function Hero() {
             height={19}
             className="absolute top-0 left-0"
           />
-          <CalendlyCTA />
+          {/* <CalendlyCTA /> */}
+          <button className="btn btn-primary">Explore More</button>
           <Image
             src="/svgs/btn-accent-bottom.svg"
             alt="accent lines"
@@ -69,13 +76,13 @@ export default function Hero() {
             className="absolute bottom-0 right-0"
           />
         </div>
-        <p className="explore-more">Explore more</p>
-        <div className="hand-drawn-arrow-container absolute">
+        {/* <p className="explore-more">Explore more</p> */}
+        <div className="hand-drawn-arrow-container">
           <Image
             src="/svgs/drawn-arrow.svg"
             alt="hand drawn arrow"
-            width={33}
-            height={98}
+            width={31}
+            height={92}
             className="hand-drawn-arrow"
           />
         </div>

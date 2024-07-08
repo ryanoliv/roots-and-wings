@@ -10,7 +10,7 @@ export default function LearnPlayGrow() {
             src="/images/learnplaygrow.png"
             alt="learn play grow graphic"
             width={468}
-            height={342}
+            height={389}
             className="px-4 md:px-0"
           />
           <div className="flex flex-col gap-xs">
