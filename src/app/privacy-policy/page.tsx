@@ -4,7 +4,7 @@ export default function PrivacyPolicy() {
       className="container flex flex-col gap-xl mt-xl"
       style={{ maxWidth: "750px" }}
     >
-      <h1>Privacy Policy</h1>
+      <h1 className="text-center md:text-start">Privacy Policy</h1>
       <div className="flex flex-col gap-md">
         <h2>Introduction</h2>
         <p>

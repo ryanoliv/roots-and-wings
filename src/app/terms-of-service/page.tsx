@@ -6,7 +6,7 @@ export default function TermsOfService() {
       className="container flex flex-col gap-xl mt-xl"
       style={{ maxWidth: "750px" }}
     >
-      <h1>Terms of Service</h1>
+      <h1 className="text-center md:text-start">Terms of Service</h1>
       <div className="flex flex-col gap-md">
         <h2>Introduction</h2>
         <p>
@@ -17,9 +17,12 @@ export default function TermsOfService() {
           “we,” “our,” or “us” refers to Roots & Wings Tutoring Ltd. The legal
           information for which is: Roots & Wings Tutoring Ltd, registered in
           England and Wales under company number 14428903, registered office 30
-          St Anns Road, London, SW13 9LJ. Our website is
-          <Link href="https://www.rootsandwings.education">
-            https://www.rootsandwings.education
+          St Anns Road, London, SW13 9LJ. Our website is{" "}
+          <Link
+            className="underline"
+            href="https://www.rootsandwings.education"
+          >
+            www.rootsandwings.education
           </Link>
           . We offer online and in-person tutoring programs for children aged 5
           to 11 years old through Roots & Wings Tutoring Ltd. The term “you”
