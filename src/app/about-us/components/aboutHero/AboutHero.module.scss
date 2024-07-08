@@ -25,16 +25,28 @@
 
 .aboutHeroPatternContainer {
   position: absolute;
-  top: -10%;
+  top: -25%;
   right: 0;
   opacity: 0.85;
   object-fit: cover;
+
+  @media (max-width: 1728px) {
+    top: -10%;
+  }
 
   @media (max-width: 1024px) {
     top: -5%;
   }
 
+  @media (max-width: 768px) {
+    top: -8%;
+  }
+
   @media (max-width: 450px) {
     top: 0;
+  }
+
+  @media (max-width: 375px) {
+    top: -5%;
   }
 }

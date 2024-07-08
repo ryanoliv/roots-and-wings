@@ -85,7 +85,6 @@ export default function YourJourney() {
               mindfulness, self-regulation and play-based academic learning.
             </p>
           </div>
-          {/* <button className="btn btn-primary">Book a Consultation</button> */}
           <CalendlyCTA />
         </div>
         <div className="flex flex-col gap-lg">
