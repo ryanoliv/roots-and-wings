@@ -106,7 +106,10 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           {content && (
             <article className="flex flex-col gap-xl mb-xl">
               {content.sections.map((section, index) => (
-                <div key={index} className="flex flex-col gap-xs text-center">
+                <div
+                  key={index}
+                  className="flex flex-col gap-xs text-center md:text-left"
+                >
                   <h2>{section.title}</h2>
                   {section.content.map((item, itemIndex) =>
                     typeof item === "string" ? (
