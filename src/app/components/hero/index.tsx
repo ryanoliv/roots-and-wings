@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Hero.module.scss";
 import CalendlyCTA from "../calendlyCTA";
 
@@ -67,7 +68,9 @@ export default function Hero() {
             className="absolute top-0 left-0"
           />
           {/* <CalendlyCTA /> */}
-          <button className="btn btn-primary">Explore More</button>
+          <Link href="/#learnplaygrow" className="btn btn-primary">
+            Explore More
+          </Link>
           <Image
             src="/svgs/btn-accent-bottom.svg"
             alt="accent lines"

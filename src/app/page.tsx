@@ -68,7 +68,7 @@ export default function Home() {
       <section>
         <Hero />
       </section>
-      <section>
+      <section id="learnplaygrow">
         <LearnPlayGrow />
       </section>
       <section>
