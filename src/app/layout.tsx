@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ReCaptchaProvider } from "next-recaptcha-v3";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Roots & Wings | Specialist Tutoring For Growth",
@@ -34,17 +36,35 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
-        <header className="fixed top-0 w-full z-40">
-          <Header />
-        </header>
-        <main>{children}</main>
-        <footer>
-          <Footer />
-        </footer>
-        <div id="modal-root"></div>
-      </body>
-    </html>
+    <ReCaptchaProvider
+      reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+    >
+      <html lang="en" suppressHydrationWarning>
+        <body>
+          <header className="fixed top-0 w-full z-40">
+            <Header />
+          </header>
+          <main>{children}</main>
+          <footer>
+            <Footer />
+          </footer>
+          <div id="modal-root"></div>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
+                page_path: window.location.pathname,
+              });
+            `}
+          </Script>
+        </body>
+      </html>
+    </ReCaptchaProvider>
   );
 }

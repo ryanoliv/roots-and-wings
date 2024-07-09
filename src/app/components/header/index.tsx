@@ -32,6 +32,8 @@ export default function Header() {
             alt="Roots & Wings Logo"
             width={110}
             height={61}
+            className="primary-logo"
+            priority
           />
         </Link>
 

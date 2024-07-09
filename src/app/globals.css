@@ -151,6 +151,14 @@ p {
   color: var(--clr-black-light);
 }
 
+.primary-logo {
+  transition: transform 400ms ease;
+}
+
+.primary-logo:hover {
+  transform: scale(1.03);
+}
+
 .container,
 .hero-container,
 .nav-container {

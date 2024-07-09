@@ -1,7 +1,7 @@
 "use client";
 
-// import { useState, useEffect } from "react";
-import Loader from "./components/loader";
+// import { useState } from "react";
+// import Loader from "./components/loader";
 import Head from "next/head";
 import Hero from "./components/hero";
 import LearnPlayGrow from "./components/learnplaygrow";
@@ -32,11 +32,6 @@ const organizationSchema = {
 export default function Home() {
   // const [isLoading, setIsLoading] = useState(true);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 2000);
-  // }, []);
   return (
     <>
       <Head>
@@ -50,7 +45,7 @@ export default function Home() {
           <section>
             <Hero />
           </section>
-          <section>
+          <section id="learnplaygrow">
             <LearnPlayGrow />
           </section>
           <section>
