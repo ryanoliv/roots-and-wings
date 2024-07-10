@@ -58,7 +58,7 @@ export default function MeetTheTeam() {
             </p>
           </div>
           <Link
-            href="https://linkedin.com/in/ally-boyes-varley-a56376105"
+            href="https://www.linkedin.com/in/ally-boyes-varley-a56376105/"
             target="_blank"
           >
             <Image
