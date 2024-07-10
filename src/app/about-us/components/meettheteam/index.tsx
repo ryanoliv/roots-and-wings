@@ -34,7 +34,7 @@ export default function MeetTheTeam() {
             </span>
           </div>
         </div>
-        <div className="flex flex-col gap-md justify-center relative">
+        <div className="flex flex-col gap-md justify-center items-center md:items-start relative">
           <Image
             src="/images/team/ally-shapes.png"
             alt="arty shapes"

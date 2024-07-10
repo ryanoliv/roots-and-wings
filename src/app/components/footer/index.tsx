@@ -59,7 +59,7 @@ export default function Footer() {
                 </div>
               </Link>
               <Link
-                href="https://linkedin.com/in/ally-boyes-varley-a56376105"
+                href="https://www.linkedin.com/in/ally-boyes-varley-a56376105/"
                 target="_blank"
               >
                 <div className={styles.footerSocials}>

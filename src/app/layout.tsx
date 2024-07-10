@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+// import { TransitionProvider } from "./context/TransitionContext";
 import "./globals.css";
 import { ReCaptchaProvider } from "next-recaptcha-v3";
 import Header from "./components/header";
@@ -39,6 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    // <TransitionProvider>
     <ReCaptchaProvider
       reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
     >
@@ -69,5 +71,6 @@ export default function RootLayout({
         </body>
       </html>
     </ReCaptchaProvider>
+    // </TransitionProvider>
   );
 }

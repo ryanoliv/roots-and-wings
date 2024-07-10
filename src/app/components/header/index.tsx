@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import CalendlyCTA from "../calendlyCTA";
+// import TransitionLink from "@/app/utils/TransitionLink";
 import ToggleIcon from "./toggleIcon";
 import Image from "next/image";
 import Link from "next/link";
 import Nav from "./nav";
-// import TransitionLink from "@/app/utils/TransitionLink";
 
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -24,6 +24,8 @@ export default function Header() {
             alt="Roots & Wings Logo"
             width={110}
             height={61}
+            className="primary-logo"
+            priority
           />
         </TransitionLink> */}
         <Link href="/">

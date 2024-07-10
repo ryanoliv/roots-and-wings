@@ -35,7 +35,7 @@ export default function TeamMember({
           <span className={styles.teamMemberOverlayTextRole}>{role}</span>
         </div>
       </div>
-      <div className="flex flex-col gap-md justify-center">
+      <div className="flex flex-col gap-md justify-center items-center md:items-start">
         <div className="flex flex-col">
           <h3 className={styles.teamMemberName}>{name}</h3>
           <p className={styles.teamMemberDescription}>{description}</p>

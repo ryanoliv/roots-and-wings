@@ -1,7 +1,22 @@
-import { MetadataRoute } from "next";
+// import { MetadataRoute } from "next";
+import { blogMetadata } from "./blog/blogMetadata";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+interface SitemapFile {
+  url: string;
+  lastModified?: string | Date;
+  changeFrequency?:
+    | "weekly"
+    | "monthly"
+    | "always"
+    | "hourly"
+    | "daily"
+    | "yearly"
+    | "never";
+  priority?: number;
+}
+
+export default function sitemap(): SitemapFile[] {
+  const staticPages: SitemapFile[] = [
     {
       url: "https://rootsandwings.education",
       lastModified: new Date().toISOString(),
@@ -27,4 +42,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
   ];
+
+  const blogPostEntries: SitemapFile[] = blogMetadata.map(
+    (entry): SitemapFile => ({
+      url: `https://rootsandwings.education${entry.blogUrl}`,
+      lastModified: entry.blogDate.toISOString(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    })
+  );
+
+  return [...staticPages, ...blogPostEntries];
 }

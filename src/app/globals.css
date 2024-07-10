@@ -82,16 +82,14 @@ body {
   font-family: var(--font-body);
 
   /* transition */
-  /* opacity: 1; */
-  transition-property: opacity, background-color, transform;
-  transition-timing-function: ease-in-out;
-  transition-duration: 500ms;
+  transition: opacity 500ms ease-in-out, background-color 500ms ease-in-out,
+    transform 500ms ease-in-out;
 }
 
 .page-transition {
-  opacity: 0;
-  background-color: var(--clr-white);
-  transform: translateY(10px);
+  opacity: 0 !important;
+  background-color: var(--clr-white) !important;
+  transform: translateY(10px) !important;
 }
 
 .grecaptcha-badge {
