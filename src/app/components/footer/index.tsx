@@ -89,6 +89,35 @@ export default function Footer() {
               </Link>
             </div>
           </div>
+          {/* <div className={styles.line}></div> */}
+          <div className="flex w-full justify-center">
+            <p
+              className={styles.footerLegal}
+              style={{
+                textDecoration: "none",
+                opacity: 0.5,
+                textAlign: "center",
+              }}
+            >
+              This site is protected by reCAPTCHA and the Google{" "}
+              <Link
+                href="https://policies.google.com/privacy"
+                className="underline"
+                target="_blank"
+              >
+                Privacy Policy
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="https://policies.google.com/terms"
+                className="underline"
+                target="_blank"
+              >
+                Terms of Service
+              </Link>{" "}
+              apply.
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -94,6 +94,10 @@ body {
   transform: translateY(10px);
 }
 
+.grecaptcha-badge {
+  display: none;
+}
+
 header {
   position: relative;
   font-family: var(--font-accent);

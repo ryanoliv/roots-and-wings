@@ -42,7 +42,7 @@ export default function Pricing() {
         src="/images/characters/whale.png"
         alt="whale"
         width={473}
-        height={260}
+        height={381}
         className="whale"
       />
       <Image

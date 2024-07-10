@@ -76,7 +76,7 @@ const cards: Card[] = [
     imgSrc: "/svgs/benefitsforyourchild.svg",
     imgAlt: "star",
     imgWidth: 50,
-    imgHeight: 50,
+    imgHeight: 49,
     title: "Benefits For Your Child",
     description:
       "We prioritise emotional and mental health, engaging in playful learning for a comprehensive educational experience.",
