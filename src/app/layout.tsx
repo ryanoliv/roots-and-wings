@@ -39,6 +39,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = {
+    "@context": "http://schema.org",
+    "@type": "EducationalOrganization",
+    name: "Roots & Wings",
+    url: "https://www.rootsandwings.education",
+    logo: "https://www.rootsandwings.education/images/logos/logo-stacked.png",
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+447958266921",
+        contactType: "customer service",
+        email: "abvrootsandwings@gmail.com",
+      },
+    ],
+    sameAs: [
+      "https://www.instagram.com/rootsandwingstutoring/",
+      "https://www.linkedin.com/in/ally-boyes-varley-a56376105/",
+    ],
+  };
   return (
     // <TransitionProvider>
     <ReCaptchaProvider
@@ -54,6 +73,12 @@ export default function RootLayout({
             <Footer />
           </footer>
           <div id="modal-root"></div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(structuredData),
+            }}
+          />
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
             strategy="afterInteractive"
