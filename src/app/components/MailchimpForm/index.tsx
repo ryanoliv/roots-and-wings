@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useReCaptcha } from "next-recaptcha-v3";
 import styles from "./MailchimpForm.module.scss";
 import Image from "next/image";
@@ -19,6 +20,7 @@ export default function MailchimpForm({
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isErrorModalVisible, setIsErrorModalVisible] = useState(false);
 
   const { executeRecaptcha } = useReCaptcha();
 
@@ -55,7 +57,8 @@ export default function MailchimpForm({
       setIsModalVisible(true);
       setEmail("");
     } else {
-      alert(data.message || "An error occured, please try again.");
+      setError(data.message || "An error occured, please try again.");
+      setIsErrorModalVisible(true);
     }
   };
 
@@ -76,7 +79,13 @@ export default function MailchimpForm({
         {error ? (
           <p className="error-msg">{error}</p>
         ) : (
-          <p className="consent-msg">By signing up you agree to our terms.</p>
+          <p className="consent-msg">
+            By signing up you agree to{" "}
+            <Link href="/terms-of-service" className="underline">
+              our terms
+            </Link>
+            .
+          </p>
         )}
         <button className={styles.signUpBtn} style={btnStyles} type="submit">
           <Image
@@ -91,44 +100,43 @@ export default function MailchimpForm({
       {isModalVisible && (
         <SuccessModal onClose={() => setIsModalVisible(false)} />
       )}
+
+      {isErrorModalVisible && (
+        <ErrorModal
+          message={error}
+          onClose={() => setIsErrorModalVisible(false)}
+        />
+      )}
     </>
   );
 }
 
 const SuccessModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   return (
-    <div
-      style={{
-        position: "fixed",
-        inset: 0,
-        paddingInline: "1rem",
-        width: "100%",
-        height: "100vh",
-        backgroundColor: "rgba(0,0,0,0.7)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        zIndex: 50,
-      }}
-    >
-      <div
-        style={{
-          backgroundColor: "#f7f2ec",
-          color: "#363433",
-          padding: "40px",
-          borderRadius: "28px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          // gap: "1.5rem",
-          maxWidth: "408px",
-        }}
-      >
+    <div className={styles.modalOverlay}>
+      <div className={styles.modalOverlayContent}>
         <h2 className={styles.successTitle}>Thanks for signing up</h2>
         <p className={styles.successSubtext}>
           We&apos;ll keep you updated on the latest news and special offers from
           Roots & Wings.
         </p>
+        <button className={styles.successBtn} onClick={onClose}>
+          Close
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const ErrorModal: React.FC<{ onClose: () => void; message: string }> = ({
+  onClose,
+  message,
+}) => {
+  return (
+    <div className={styles.modalOverlay}>
+      <div className={styles.modalOverlayContent}>
+        <h2 className={styles.modalOverlayErrorTitle}>Error</h2>
+        <p className={styles.successSubtext}>{message}</p>
         <button className={styles.successBtn} onClick={onClose}>
           Close
         </button>

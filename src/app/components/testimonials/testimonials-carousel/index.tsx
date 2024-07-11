@@ -127,7 +127,7 @@ export default function TestimonialsCarousel() {
     dots: true,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 7500,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,

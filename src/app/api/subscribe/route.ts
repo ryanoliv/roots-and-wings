@@ -33,8 +33,6 @@ export async function POST(request: NextRequest) {
     });
   }
 
-  // const { email } = await request.json();
-
   if (!email || !email.includes("@")) {
     return new Response(JSON.stringify({ message: "Email is invalid" }), {
       status: 400,
