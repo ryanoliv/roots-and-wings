@@ -32,6 +32,7 @@ export default function ArticleCTA() {
             inputStyle={{
               border: "1px solid var(--clr-black)",
               backgroundColor: "var(--card-bg)",
+              color: "var(--clr-black)",
             }}
             btnStyles={{
               border: "1px solid var(--clr-black)",

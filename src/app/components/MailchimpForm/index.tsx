@@ -115,7 +115,7 @@ const SuccessModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modalOverlayContent}>
-        <h2 className={styles.successTitle}>Thanks for signing up</h2>
+        <h2 className={styles.successTitle}>Thanks for signing up!</h2>
         <p className={styles.successSubtext}>
           We&apos;ll keep you updated on the latest news and special offers from
           Roots & Wings.

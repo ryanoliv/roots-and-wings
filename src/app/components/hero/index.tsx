@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Hero.module.scss";
-import CalendlyCTA from "../calendlyCTA";
 
 export default function Hero() {
   return (
@@ -28,29 +27,10 @@ export default function Hero() {
         </picture>
       </div>
 
-      <div className="flex flex-col gap-lg items-center">
-        <div className="flex flex-col items-center gap-sm">
+      <div className="flex flex-col gap-md md:gap-lg items-center">
+        <div className="flex flex-col items-center gap-xs md:gap-sm">
           <div className="flex flex-col">
-            {/* <h1 className="hero-logo-container">
-              <Image
-                src="/images/hero-logo.png"
-                alt="roots & wings alternative logo"
-                // width={632}
-                // height={118}
-                fill
-                style={{ objectFit: "cover" }}
-              />
-            </h1> */}
-            <h1>
-              {/* <Image
-                src="/images/hero-logo.png"
-                alt="roots & wings alternative logo"
-                width={632}
-                height={118}
-                className="hero-logo"
-              /> */}{" "}
-              Welcome!
-            </h1>
+            <h1>Welcome!</h1>
           </div>
           <p className={styles.mainSubTitle}>
             What if the world of education valued academic success and emotional
@@ -67,7 +47,6 @@ export default function Hero() {
             height={19}
             className="absolute top-0 left-0"
           />
-          {/* <CalendlyCTA /> */}
           <Link href="/#learnplaygrow" className="btn btn-primary">
             Explore More
           </Link>
@@ -79,7 +58,6 @@ export default function Hero() {
             className="absolute bottom-0 right-0"
           />
         </div>
-        {/* <p className="explore-more">Explore more</p> */}
         <div className="hand-drawn-arrow-container">
           <Image
             src="/svgs/drawn-arrow.svg"

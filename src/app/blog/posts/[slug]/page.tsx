@@ -1,4 +1,4 @@
-// pages/posts/[slug].tsx
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../Blog.module.scss";

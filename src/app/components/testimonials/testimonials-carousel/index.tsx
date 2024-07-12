@@ -127,7 +127,8 @@ export default function TestimonialsCarousel() {
     dots: true,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 7500,
+    pauseOnHover: true,
+    autoplaySpeed: 6000,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -143,9 +144,7 @@ export default function TestimonialsCarousel() {
       <Slider {...carouselSettings}>
         {testimonialsData.map((testimonial) => (
           <div key={testimonial.id} className={styles.testimonialsCard}>
-            <p className={styles.testimonialQuote}>
-              &quot;{testimonial.testimonial}&quot;
-            </p>
+            <p className={styles.testimonialQuote}>{testimonial.testimonial}</p>
             <div className="flex flex-col">
               <h3 className={styles.testimonialName}>{testimonial.name}</h3>
               <h4 className={styles.testimonialTitle}>{testimonial.title}</h4>
