@@ -10,6 +10,34 @@ import { formatDate, getTagStyles } from "@/app/utils/blogUtils";
 import LinkedInShareButton from "../../components/linkedinsharebutton";
 import DownloadableResource from "../../components/downloadableresource";
 
+type Props = {
+  params: { slug: string };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const post = blogMetadata.find((p) => p.slug === params.slug);
+
+  if (!post) {
+    return {
+      title: "Post Not Found | Roots & Wings",
+      description: "The requested blog post could not be found",
+    };
+  }
+
+  return {
+    title: `${post.blogTitle} | Roots & Wings`,
+    description: post.blogSummary,
+    openGraph: {
+      url: `https://www.rootsandwings.education/blog/posts/${post.slug}`,
+      title: post.blogTitle,
+      description: post.blogSummary,
+    },
+    alternates: {
+      canonical: `https://www.rootsandwings.education/blog/posts/${post.slug}`,
+    },
+  };
+}
+
 interface BlogSection {
   title: string;
   content: (string | { subtitle: string; list: string[] })[];

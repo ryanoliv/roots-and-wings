@@ -5,6 +5,7 @@ export default function DownloadableResource() {
     <Link
       href="/blogresources/Play-based-educational-games-apps.pdf"
       download="Play-based-educational-games-apps.pdf"
+      target="_blank"
     >
       <div
         style={{

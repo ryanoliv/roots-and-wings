@@ -56,6 +56,8 @@ export default function Loader({ onComplete }: LoaderProps) {
   useGSAP(() => {
     const tl = gsap.timeline({ onComplete });
 
+    tl.set({}, {}, "+=0.5");
+
     const elements = Object.keys(refs.current)
       .map((key) => refs.current[key])
       .filter((el): el is HTMLImageElement => el !== null);
@@ -68,9 +70,11 @@ export default function Loader({ onComplete }: LoaderProps) {
         x: 0,
         duration: 0.4,
         stagger: 0.1,
-        delay: 0.4,
       }
     );
+
+    tl.call(() => {}, [], "+=0.5");
+    tl.call(onComplete);
   }, []);
 
   const topRowKeys = ["R", "OYellow", "Opurp", "T", "SBlue", "CallieAnd"];
