@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Our Programme | Roots & Wings",
   description:
     "Empower your child with Roots & Wings tutoring: a blend of academic enrichment and emotional growth in a 12-week transformative journey.",
+  metadataBase: new URL("https://www.rootsandwings.education"),
   alternates: {
     canonical: "/our-programme",
   },

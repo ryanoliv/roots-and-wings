@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "About Us | Roots & Wings",
   description:
     "Learn more about Roots & Wings and our mission to combine education with emotional support.",
+  metadataBase: new URL("https://www.rootsandwings.education"),
   alternates: {
     canonical: "/about-us",
   },
