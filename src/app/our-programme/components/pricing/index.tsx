@@ -6,13 +6,12 @@ const pricing = [
     bgColor: "var(--card-bg)",
     textColor: "var(--clr-black)",
     type: "In-Person Programme",
-    price: "1499",
+    price: "320",
     features: [
       "3 x Parent education consults",
       "12 x In-person tutoring sessions from the comfort of your home",
       "1 x Workbook to keep for life",
       "12 x Weekly feedback via WhatsApp",
-      "3 x Parent goal check-in session",
       "In person, interactive play-based learning activities",
     ],
     excludes: [],
@@ -21,17 +20,14 @@ const pricing = [
     bgColor: "var(--clr-black)",
     textColor: "var(--clr-white)",
     type: "Online Programme",
-    price: "1199",
+    price: "300",
     features: [
       "3 x Parent education consults",
       "12 x Online tutoring sessions from the comfort of your home",
       "1 x Workbook to keep for life",
       "12 x Weekly feedback via WhatsApp",
     ],
-    excludes: [
-      "3 x Parent goal check-in session",
-      "In person, interactive play-based learning activities",
-    ],
+    excludes: ["In person, interactive play-based learning activities"],
   },
 ];
 
@@ -82,7 +78,10 @@ export default function Pricing() {
                 className="py-8 flex flex-col"
                 style={{ borderBottom: "1px solid var(--border)" }}
               >
-                <h4 className={styles.PricingCardPrice}>£ {price.price}</h4>
+                <h4 className={styles.PricingCardPrice}>
+                  £ {price.price}{" "}
+                  <span style={{ fontSize: "1.2rem" }}>/ month</span>
+                </h4>
                 <span
                   className="italic text-center md:text-start"
                   style={{ fontSize: "0.8rem" }}
