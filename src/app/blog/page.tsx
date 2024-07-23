@@ -7,10 +7,6 @@ export const metadata: Metadata = {
   title: "Blog | Roots & Wings",
   description:
     "Explore our blog and read more on trending topics in the educational space.",
-  metadataBase: new URL("https://www.rootsandwings.education"),
-  alternates: {
-    canonical: "/blog",
-  },
   openGraph: {
     title: "Blog | Roots & Wings",
     description:

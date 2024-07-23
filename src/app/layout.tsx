@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   description:
     "Empower your child with Roots & Wings tutoring: a blend of academic enrichment and emotional growth in a 12-week transformative journey.",
   metadataBase: new URL("https://www.rootsandwings.education"),
+  alternates: {
+    canonical: "./",
+  },
   verification: {
     google: "ISLD6BYNOPtmb0prcjvG_uMNToKgjyIXPNmblYFlui0",
   },
@@ -18,7 +21,7 @@ export const metadata: Metadata = {
     title: "Roots & Wings | Specialist Tutoring For Growth",
     description:
       "Empower your child with Roots & Wings tutoring: a blend of academic enrichment and emotional growth in a 12-week transformative journey.",
-    url: "https://www.rootsandwings.education/",
+    url: "https://www.rootsandwings.education",
     siteName: "Roots & Wings | Specialist Tutoring For Growth",
     images: [
       {
