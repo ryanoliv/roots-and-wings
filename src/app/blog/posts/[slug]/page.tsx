@@ -32,10 +32,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.blogTitle,
       description: post.blogSummary,
     },
-    // metadataBase: new URL("https://www.rootsandwings.education"),
-    // alternates: {
-    //   canonical: `https://www.rootsandwings.education/blog/posts/${post.slug}`,
-    // },
   };
 }
 

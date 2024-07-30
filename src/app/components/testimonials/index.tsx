@@ -1,10 +1,20 @@
 "use client";
 
-import Image from "next/image";
 import TestimonialsCarousel from "./testimonials-carousel";
 import styles from "./testimonials-carousel/TestimonialsCarousel.module.scss";
 
-export default function Testimonials() {
+interface Testimonial {
+  id: number;
+  name: string;
+  title: string;
+  testimonial: string;
+}
+
+interface TestimonialsProps {
+  testimonials: Testimonial[];
+}
+
+export default function Testimonials({ testimonials }: TestimonialsProps) {
   return (
     <div className={styles.carouselContainer}>
       <div className={styles.gradientOverlay}></div>
@@ -13,7 +23,7 @@ export default function Testimonials() {
           <h2>Testimonials</h2>
           <p>Here’s what parents and educators have to say.</p>
         </div>
-        <TestimonialsCarousel />
+        <TestimonialsCarousel testimonials={testimonials} />
       </div>
     </div>
   );

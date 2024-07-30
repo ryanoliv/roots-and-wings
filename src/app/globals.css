@@ -678,9 +678,9 @@ p {
     text-align: center;
   }
 
-  /* .slick-list {
-    overflow: hidden !important;
-  } */
+  .slick-slide {
+    padding: 0 18px;
+  }
 
   .slick-list,
   .slick-track {

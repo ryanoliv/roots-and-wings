@@ -16,27 +16,29 @@ interface SitemapFile {
 }
 
 export default function sitemap(): SitemapFile[] {
+  const baseUrl = "https://www.rootsandwings.education";
+
   const staticPages: SitemapFile[] = [
     {
-      url: "https://rootsandwings.education",
+      url: baseUrl,
       lastModified: new Date().toISOString(),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: "https://rootsandwings.education/about-us",
+      url: `${baseUrl}/about-us`,
       lastModified: new Date().toISOString(),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: "https://rootsandwings.education/blog",
+      url: `${baseUrl}/blog`,
       lastModified: new Date().toISOString(),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: "https://rootsandwings.education/our-programme",
+      url: `${baseUrl}/our-programme`,
       lastModified: new Date().toISOString(),
       changeFrequency: "weekly",
       priority: 0.8,
@@ -45,7 +47,7 @@ export default function sitemap(): SitemapFile[] {
 
   const blogPostEntries: SitemapFile[] = blogMetadata.map(
     (entry): SitemapFile => ({
-      url: `https://rootsandwings.education${entry.blogUrl}`,
+      url: `${baseUrl}${entry.blogUrl}`,
       lastModified: entry.blogDate.toISOString(),
       changeFrequency: "monthly",
       priority: 0.6,
