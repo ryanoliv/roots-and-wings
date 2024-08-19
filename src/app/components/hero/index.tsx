@@ -9,7 +9,7 @@ export default function Hero() {
         <picture>
           <source
             srcSet="/images/hero-pattern-mobile.png"
-            media="(max-width: 768px)"
+            media="(max-width: 500px)"
           />
           <source
             srcSet="/images/hero-pattern-tablet.png"
