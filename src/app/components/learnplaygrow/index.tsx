@@ -25,9 +25,11 @@ export default function LearnPlayGrow() {
               practices, play-based learning & psychological developmental
               skills to help your child activate their full potential. <br />{" "}
               <br />
-              Become part of this thriving community, either in-person or
-              online, so that your child&apos;s academics and relationships can
-              flourish together.
+              Our commitment is simple: to empower your child holistically
+              through transformative tutoring, helping them reach their full
+              potential. We are here to transform education, prioritising
+              wellbeing, individual growth, and comprehensive care. Together,
+              let&apos;s re-imagine education for a brighter future.
             </p>
           </div>
         </div>

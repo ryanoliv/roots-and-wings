@@ -1,33 +1,50 @@
 import styles from "../../OurProgramme.module.scss";
 import Image from "next/image";
 
+interface Pricing {
+  type: string;
+  typeDescription: string;
+  price: string;
+  paymentPlan: string;
+  pricePerHour: string;
+  features: string[];
+  bgColor: string;
+  textColor: string;
+}
+
 const pricing = [
   {
+    type: "1:1 Bespoke Tutoring Packages",
+    typeDescription:
+      "Weekly bespoke tutoring sessions are bundled in 4, 8, or 12-week packages, delivered by our expert tutors using a holistic, play-based approach.",
+    // typeDescription: "Weekly sessions, every week for 12 weeks.",
+    price: "320",
+    paymentPlan: "Bundled in 4, 8 or 12 week packages.",
+    pricePerHour: "80",
+    features: [
+      "4, 8 or 12 x 1:1 tutoring sessions",
+      "Weekly feedback sessions via WhatsApp",
+      "The Happy Confident Company Wellbeing Journal",
+      "Specific Learning Programmes for targeted learning barriers",
+    ],
     bgColor: "var(--card-bg)",
     textColor: "var(--clr-black)",
-    type: "In-Person Programme",
-    price: "320",
-    features: [
-      "3 x Parent education consults",
-      "12 x In-person tutoring sessions from the comfort of your home",
-      "1 x Workbook to keep for life",
-      "12 x Weekly feedback via WhatsApp",
-      "In person, interactive play-based learning activities",
-    ],
-    excludes: [],
   },
   {
+    type: "The Roots to Wings Wellbeing Programme",
+    typeDescription:
+      "Watch your child go from struggling to thriving, in our 1:1 - in person or online - 12 week wellbeing programme delivered weekly by expert tutors.",
+    price: "1200",
+    pricePerHour: "80",
+    paymentPlan: "Payment plan options of 3 or 4 months.",
+    features: [
+      "12 x 1:1 sessions",
+      "3 x Pupil Progress Sessions/ Parent Consultations ",
+      "Comprehensive Workbook",
+      "Weekly session feedback via whatsapp",
+    ],
     bgColor: "var(--clr-black)",
     textColor: "var(--clr-white)",
-    type: "Online Programme",
-    price: "300",
-    features: [
-      "3 x Parent education consults",
-      "12 x Online tutoring sessions from the comfort of your home",
-      "1 x Workbook to keep for life",
-      "12 x Weekly feedback via WhatsApp",
-    ],
-    excludes: ["In person, interactive play-based learning activities"],
   },
 ];
 
@@ -73,6 +90,7 @@ export default function Pricing() {
                 style={{ borderBottom: "1px solid var(--border)" }}
               >
                 <h3 className={styles.PricingCardType}>{price.type}</h3>
+                <p style={{ color: "inherit" }}>{price.typeDescription}</p>
               </div>
               <div
                 className="py-8 flex flex-col"
@@ -80,19 +98,24 @@ export default function Pricing() {
               >
                 <h4 className={styles.PricingCardPrice}>
                   £ {price.price}{" "}
-                  <span style={{ fontSize: "1.2rem" }}>/ month</span>
+                  {index === 0 && (
+                    <span style={{ fontSize: "1.2rem" }}>/ month</span>
+                  )}
                 </h4>
                 <span
                   className="italic text-center md:text-start"
                   style={{ fontSize: "0.8rem" }}
                 >
-                  All prices are VAT exclusive. <br /> Payment plans of 3–6
-                  months may be arranged upon request.
+                  {price.paymentPlan}
                 </span>
+                <p style={{ color: "inherit", marginTop: "var(--gap-sm)" }}>
+                  Price per hour:{" "}
+                  <span className="font-bold">£{price.pricePerHour}</span>
+                </p>
               </div>
               <div className="pt-8 flex flex-col gap-sm">
-                {price.features.map((feature, index) => (
-                  <div key={index} className="flex gap-xs items-start">
+                {price.features.map((feature, featureIndex) => (
+                  <div key={featureIndex} className="flex gap-xs items-start">
                     <Image
                       src="/svgs/checkmark.svg"
                       alt="check mark"
@@ -100,20 +123,6 @@ export default function Pricing() {
                       height={20}
                     />
                     <span style={{ lineHeight: "125%" }}>{feature}</span>
-                  </div>
-                ))}
-                {price.excludes.map((exclude, excludeIndex) => (
-                  <div
-                    key={excludeIndex}
-                    className="flex gap-xs items-start opacity-30"
-                  >
-                    <Image
-                      src="/svgs/cross-mark.svg"
-                      alt="cross mark"
-                      width={20}
-                      height={20}
-                    />
-                    <span style={{ lineHeight: "125%" }}>{exclude}</span>
                   </div>
                 ))}
               </div>

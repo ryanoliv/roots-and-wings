@@ -26,47 +26,47 @@ const steps = [
     blobSrc: "/svgs/blob-turq.svg",
     blobAlt: "turq blob",
     stepNumber: "Step 3",
-    title: "Parent consultation (1 of 3)",
+    title: "Select your Programme",
     description:
-      "Throughout our collaborative process, we take the time to thoroughly review any challenges your family may be facing and identify opportunities for growth. By setting specific, achievable goals, we ensure that every step of the educational journey is purposeful and tailored to your family's unique needs and aspirations. We work together to paint a clear picture of where you want to be, empowering you to make informed decisions and take meaningful actions towards achieving your family objectives.",
+      "Whether you are looking for academic tutoring or our wellbeing programme. We are here to support you and your child’s needs. We help children that are struggling with anxious mindsets, friendships, challenges or barriers to learning.  Go from struggling to thriving resulting in resilient, confident and engaged learners.",
     stepClr: "var(--clr-turq)",
   },
   {
     blobSrc: "/svgs/blob-red.svg",
     blobAlt: "red blob",
     stepNumber: "Step 4",
-    title: "Start the Roots to Wings Programme",
+    title: "Start your Programme",
     description:
-      "Our journey begins with self-discovery, where we connect deeply with our personal identity and strengths. Through collaboration and support, we empower ourselves to fully embrace our unique qualities and abilities. By cultivating a positive self-image grounded in self-awareness, we lay the groundwork for personal growth and fulfillment.",
+      "Through collaboration and support, we empower your child to fully embrace their unique qualities and abilities.",
     stepClr: "var(--clr-red)",
   },
-  {
-    blobSrc: "/svgs/blob-blue.svg",
-    blobAlt: "blue blob",
-    stepNumber: "Step 5",
-    title: "Parent consultation (2 of 3)",
-    description:
-      "During our next check-in session, we prioritise assessing your child’s progress, addressing any lingering questions or concerns. In doing so, we can identify areas that may require additional attention or improvement. We maintain channels of open communication and address any queries or uncertainties.",
-    stepClr: "var(--clr-blue)",
-  },
-  {
-    blobSrc: "/svgs/blob-purp.svg",
-    blobAlt: "purple blob",
-    stepNumber: "Step 6",
-    title: "Roots to Wings programme cont.",
-    description:
-      "In our next part of the journey, we focus on nurturing harmonious relationships and explore the power of positive self-talk, boundary-setting, and growth mindsets. This transformative process elevates us from comfort to courage, empowering us to cultivate authentic connections and unlock our full potential.",
-    stepClr: "var(--clr-purple)",
-  },
-  {
-    blobSrc: "/svgs/blob-yellow.svg",
-    blobAlt: "yellow blob",
-    stepNumber: "Step 7",
-    title: "Parent consultation (3 of 3)",
-    description:
-      "As we wrap up our exciting 12-week adventure, it's time for a little reflection and celebration! We'll revisit all of the fun that your child has had and the deep learning that we have uncovered together. Then, it's decision time: do we want to keep the tutoring train rolling, or are we ready to fly solo with our newfound skills?",
-    stepClr: "var(--clr-yellow)",
-  },
+  // {
+  //   blobSrc: "/svgs/blob-blue.svg",
+  //   blobAlt: "blue blob",
+  //   stepNumber: "Step 5",
+  //   title: "Parent consultation (2 of 3)",
+  //   description:
+  //     "During our next check-in session, we prioritise assessing your child’s progress, addressing any lingering questions or concerns. In doing so, we can identify areas that may require additional attention or improvement. We maintain channels of open communication and address any queries or uncertainties.",
+  //   stepClr: "var(--clr-blue)",
+  // },
+  // {
+  //   blobSrc: "/svgs/blob-purp.svg",
+  //   blobAlt: "purple blob",
+  //   stepNumber: "Step 6",
+  //   title: "Roots to Wings programme cont.",
+  //   description:
+  //     "In our next part of the journey, we focus on nurturing harmonious relationships and explore the power of positive self-talk, boundary-setting, and growth mindsets. This transformative process elevates us from comfort to courage, empowering us to cultivate authentic connections and unlock our full potential.",
+  //   stepClr: "var(--clr-purple)",
+  // },
+  // {
+  //   blobSrc: "/svgs/blob-yellow.svg",
+  //   blobAlt: "yellow blob",
+  //   stepNumber: "Step 7",
+  //   title: "Parent consultation (3 of 3)",
+  //   description:
+  //     "As we wrap up our exciting 12-week adventure, it's time for a little reflection and celebration! We'll revisit all of the fun that your child has had and the deep learning that we have uncovered together. Then, it's decision time: do we want to keep the tutoring train rolling, or are we ready to fly solo with our newfound skills?",
+  //   stepClr: "var(--clr-yellow)",
+  // },
 ];
 
 export default function YourJourney() {
@@ -77,15 +77,25 @@ export default function YourJourney() {
           <div className="flex flex-col gap-xs text-center md:text-start">
             <h1>Your Journey</h1>
             <p style={{ maxWidth: "505px" }}>
-              Guiding you on each step of our 12-week journey together. Our
-              tutoring programme includes one session per week (online or
-              in-person) for the 12 week journey. Included is three parent
-              consultations. Each lesson is carefully crafted to blend academic
-              enrichment with emotional wellbeing, by weaving together
-              mindfulness, self-regulation and play-based academic learning.
+              Watch your child go from struggling to thriving! Guiding you on
+              each step of our journey together. Whether you are choosing our
+              academic tutoring or our wellbeing programme, our 4 step approach:
+              Connect, Empower, Cultivate and Enhance transforms your child into
+              a confident, resilient and engaged learner! It&apos;s the
+              parents&apos; journey as much as the child&apos;s.
             </p>
           </div>
           <CalendlyCTA />
+          <div className="flex flex-col">
+            <small className="flex items-center">
+              * For optimal success we suggest one session per week (online or
+              in-person).
+            </small>
+            <small className="flex items-center">
+              * Three parent consultations included ensuring a holistic approach
+              with comprehensive care.
+            </small>
+          </div>
         </div>
         <div className="flex flex-col gap-lg text-center md:text-start">
           {steps.map((step, index) => (

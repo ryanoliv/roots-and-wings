@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Hero from "./components/hero";
 import LearnPlayGrow from "./components/learnplaygrow";
-import ProgrammeIntro from "./components/programme-intro";
+import WhyUsWhyNow from "./components/whyuswhynow";
 import Testimonials from "./components/testimonials";
 import CTA from "./components/cta";
 import LandingBlog from "./blog/components/landing-blog";
@@ -118,7 +118,7 @@ export default function Home() {
         <LearnPlayGrow />
       </section>
       <section>
-        <ProgrammeIntro />
+        <WhyUsWhyNow />
       </section>
       <section className="border-b" id="testimonials">
         <Testimonials testimonials={testimonials} />

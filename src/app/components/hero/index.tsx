@@ -34,9 +34,9 @@ export default function Hero() {
           </div>
           <p className={styles.mainSubTitle}>
             What if the world of education valued academic success and emotional
-            wellbeing equally? We nurture young minds and empower them with the
-            social and emotional skills they need to thrive in learning and in
-            life.
+            wellbeing equally? We deliver transformative tutoring programmes -
+            in-person & online - in schools and directly to families so children
+            can thrive in learning and in life.
           </p>
         </div>
         <div className="relative p-4">
