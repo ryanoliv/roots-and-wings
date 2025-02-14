@@ -90,6 +90,18 @@ export default function Footer() {
             </div>
           </div>
           {/* <div className={styles.line}></div> */}
+          <div className="w-full text-center">
+            <p className="text-sm text-[#b5b1ad]">
+              Designed & Developed @{" "}
+              <Link
+                href="https://www.konten.dev"
+                target="_blank"
+                className="underline"
+              >
+                Konten
+              </Link>
+            </p>
+          </div>
           <div className="flex w-full justify-center">
             <p
               className={styles.footerLegal}
