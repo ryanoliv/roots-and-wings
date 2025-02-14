@@ -80,7 +80,7 @@ export default function Footer() {
                 />
               </span>
             </div>
-            <div className="flex gap-sm">
+            <div className="flex gap-sm justify-end flex-1">
               <Link href="/privacy-policy" className={styles.footerLegal}>
                 Privacy Policy
               </Link>
