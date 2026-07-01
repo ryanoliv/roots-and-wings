@@ -27,16 +27,16 @@ export default function Hero() {
         </picture>
       </div>
 
-      <div className="flex flex-col gap-md md:gap-lg items-center">
+      <div className="flex flex-col gap-md md:gap-lg items-center text-center">
         <div className="flex flex-col items-center gap-xs md:gap-sm">
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center gap-4">
             <h1>Welcome!</h1>
+            <h3 className="max-w-3xl px-4 text-xl md:text-2xl font-semibold text-gray-800 leading-relaxed tracking-tight text-balance">
+  Redesigning education for primary-aged neurodivergent children and the families who love them.
+</h3>
           </div>
           <p className={styles.mainSubTitle}>
-            What if the world of education valued academic success and emotional
-            wellbeing equally? We deliver transformative tutoring programmes -
-            in-person & online - in schools and directly to families so children
-            can thrive in learning and in life.
+            Roots & Wings is a specialist tutoring and education company built on one belief: children learn best when they feel safe, understood and genuinely connected. Using the Connect-Ed Method, we support neurodivergent children and their families through 1:1 and group tutoring, bespoke homeschool + flexi-school programmes, and a range of Emotional Resilience products for home and classroom.
           </p>
         </div>
         <div className="relative p-4">

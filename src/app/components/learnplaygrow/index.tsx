@@ -16,20 +16,23 @@ export default function LearnPlayGrow() {
           <div className="flex flex-col gap-xs">
             <h2 className="learnplaygrow-title">We Believe in Children</h2>
             <p className="webelieveinchildren-text">
-              Children who understand their thoughts and emotions will know
-              their self-worth, for life. <br />
-              Roots & Wings Tutoring supports primary-aged children to succeed
-              both academically and emotionally, through our playful,
-              personalised and specialised approach to tutoring. <br /> <br />
-              The Roots to Wings Way combines expert teachers, wellbeing
-              practices, play-based learning & psychological developmental
-              skills to help your child activate their full potential. <br />{" "}
-              <br />
-              Our commitment is simple: to empower your child holistically
-              through transformative tutoring, helping them reach their full
-              potential. We are here to transform education, prioritising
-              wellbeing, individual growth, and comprehensive care. Together,
-              let&apos;s re-imagine education for a brighter future.
+              Not in fixing them or managing their behaviour, but in recognising
+              their capacity to grow when the right conditions are in place.
+              <br /> <br />
+              Roots &amp; Wings was built on a simple observation: traditional
+              education structures do not always align with how neurodivergent
+              children learn best. Standardised pacing, performance-based
+              assessment and highly structured classroom environments work well
+              for some learners. For others, they can contribute to anxiety,
+              disengagement and a gradual erosion of confidence.
+              <br /> <br />
+              We believe education can be designed more intelligently. Through the
+              Connect-Ed Method, we place self-regulation, emotional development
+              and relational safety at the centre of learning. These are not
+              add-ons. They are the foundation.
+              <br /> <br />
+              When a child feels regulated, understood and genuinely engaged,
+              academic progress becomes sustainable. That is the work.
             </p>
           </div>
         </div>
