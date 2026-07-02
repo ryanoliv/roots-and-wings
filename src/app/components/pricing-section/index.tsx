@@ -41,7 +41,7 @@ export default function PricingSection() {
 
 function PricingCard({ title, price, feature }: { title: string, price: string, feature: string }) {
   return (
-    <div className="flex justify-between items-center p-6 bg-gray-50 rounded-xl hover:shadow-md transition-shadow">
+    <div className="flex justify-between items-center p-6 rounded-xl hover:shadow-md transition-shadow">
       <div>
         <h4 className="font-bold text-lg">{title}</h4>
         <p className="text-sm text-gray-500">{feature}</p>

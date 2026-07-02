@@ -7,10 +7,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const logos = [
-  { name: "Partner 1", src: "/images/logo-placeholder-1.png" },
-  { name: "Partner 2", src: "/images/logo-placeholder-2.png" },
-  { name: "Partner 3", src: "/images/logo-placeholder-3.png" },
-  { name: "Partner 4", src: "/images/logo-placeholder-4.png" },
+  { name: "MMM Main Logo", src: "/partnerlogos/Logo1.png" },
+  { name: "The Sensory Haven Logo", src: "/partnerlogos/Logo2.png" },
 ];
 
 export default function PartnerLogos() {
@@ -18,14 +16,16 @@ export default function PartnerLogos() {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    // Since you only have 2 logos, we set slidesToShow to 2 
+    // to prevent slider duplication issues
+    slidesToShow: 2, 
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: false, // Turn off arrows as they often cause overflow
+    autoplaySpeed: 3000,
+    arrows: false,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 3 } },
-      { breakpoint: 600, settings: { slidesToShow: 2 } }
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 600, settings: { slidesToShow: 1 } }
     ]
   };
 
@@ -38,13 +38,18 @@ export default function PartnerLogos() {
         <div className="w-full">
           <Slider {...settings}>
             {logos.map((logo, index) => (
-              <div key={index} className="outline-none">
-                <img 
-                  src={logo.src} 
-                  alt={logo.name} 
-                  className="h-12 mx-auto grayscale opacity-60 object-contain" 
-                />
-              </div>
+            <div key={index} className="outline-none flex justify-center items-center">
+  <img 
+    src={logo.src} 
+    alt={logo.name} 
+    // Removed 'grayscale' and 'opacity' to see if it renders clearly
+    className="h-20 w-auto object-contain" 
+    onError={(e) => {
+      e.currentTarget.style.display = 'none';
+      console.error(`Failed to load image: ${logo.src}`);
+    }}
+  />
+</div>
             ))}
           </Slider>
         </div>
