@@ -22,20 +22,63 @@ const steps = [
 
 export default function OnboardingSteps() {
   return (
-    <section>
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Your four-step journey</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <section className="relative py-20">
+      <div className="container flex flex-col gap-xl items-center mx-auto px-4 max-w-6xl">
+        
+        <div className="flex flex-col items-center mb-8 text-center">
+          <h2 className="text-4xl font-bold mb-4">Your four-step journey</h2>
+          <p style={{ maxWidth: "600px", textAlign: "center", fontStyle: "italic", opacity: 0.8 }}>
+            A clear, pressure-free path to finding the right support for your child.
+          </p>
+        </div>
+        
+        {/* Switched from a cramped 4-column layout to a spacious 2x2 grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
-              <div className="w-12 h-12 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full font-bold text-xl mb-4">
+            <div 
+              key={index} 
+              className="flex flex-col p-8 xl:p-12 rounded-xl relative overflow-hidden"
+              style={{ 
+                backgroundColor: "var(--card-bg)", 
+                color: "var(--clr-black)",
+                border: "1px solid var(--border)"
+              }}
+            >
+              {/* Elegant, oversized typography watermark instead of colored circles */}
+              <div 
+                className="absolute top-4 right-6 font-bold pointer-events-none select-none" 
+                style={{ fontSize: "8rem", opacity: 0.04, lineHeight: "1" }}
+              >
                 {index + 1}
               </div>
-              <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
+              
+              <div className="relative z-10 flex flex-col h-full">
+                {/* Clean, structured subheading inherited from the new design language */}
+                <span 
+                  className="text-sm uppercase tracking-widest font-semibold mb-4"
+                  style={{ opacity: 0.6 }}
+                >
+                  Step 0{index + 1}
+                </span>
+                
+                <h3 
+                  className="text-2xl font-bold mb-6 pb-6" 
+                  style={{ borderBottom: "1px solid var(--border)" }}
+                >
+                  {step.title}
+                </h3>
+                
+                <p 
+                  style={{ lineHeight: "160%", opacity: 0.85 }} 
+                  className="flex-grow text-base md:text-lg"
+                >
+                  {step.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
+        
       </div>
     </section>
   );
