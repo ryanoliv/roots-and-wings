@@ -13,10 +13,10 @@ export default function PartnerLogos() {
     <section className="container mx-auto px-4 mt-16 md:mt-24 mb-4 md:mb-8 flex flex-col items-center">
       
       {/* 
-        Scaled up to text-3xl / text-4xl to ensure it holds visual weight on the page.
-        Reduced the bottom margin (mb-8) so it doesn't push the logos too far down.
+        Massively scaled up to text-4xl, 5xl, and 6xl on large screens.
+        Added text-gray-900 for stronger contrast and visual weight.
       */}
-      <h2 className="text-center text-3xl md:text-4xl font-bold uppercase tracking-widest mb-8">
+      <h2 className="text-center text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-widest mb-10 text-gray-900">
         Trusted by
       </h2>
       
