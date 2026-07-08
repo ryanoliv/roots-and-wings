@@ -22,64 +22,48 @@ const steps = [
 
 export default function OnboardingSteps() {
   return (
-    <section className="relative py-20">
-      <div className="container flex flex-col gap-xl items-center mx-auto px-4 max-w-6xl">
-        
-        <div className="flex flex-col items-center mb-8 text-center">
-          <h2 className="text-4xl font-bold mb-4">Your four-step journey</h2>
-          <p style={{ maxWidth: "600px", textAlign: "center", fontStyle: "italic", opacity: 0.8 }}>
-            A clear, pressure-free path to finding the right support for your child.
-          </p>
-        </div>
-        
-        {/* Switched from a cramped 4-column layout to a spacious 2x2 grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-          {steps.map((step, index) => (
-            <div 
-              key={index} 
-              className="flex flex-col p-8 xl:p-12 rounded-xl relative overflow-hidden"
-              style={{ 
-                backgroundColor: "var(--card-bg)", 
-                color: "var(--clr-black)",
-                border: "1px solid var(--border)"
-              }}
-            >
-              {/* Elegant, oversized typography watermark instead of colored circles */}
-              <div 
-                className="absolute top-4 right-6 font-bold pointer-events-none select-none" 
-                style={{ fontSize: "8rem", opacity: 0.04, lineHeight: "1" }}
-              >
-                {index + 1}
-              </div>
-              
-              <div className="relative z-10 flex flex-col h-full">
-                {/* Clean, structured subheading inherited from the new design language */}
-                <span 
-                  className="text-sm uppercase tracking-widest font-semibold mb-4"
-                  style={{ opacity: 0.6 }}
-                >
-                  Step 0{index + 1}
-                </span>
-                
-                <h3 
-                  className="text-2xl font-bold mb-6 pb-6" 
-                  style={{ borderBottom: "1px solid var(--border)" }}
-                >
-                  {step.title}
-                </h3>
-                
-                <p 
-                  style={{ lineHeight: "160%", opacity: 0.85 }} 
-                  className="flex-grow text-base md:text-lg"
-                >
-                  {step.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-        
+    <section className="container mx-auto px-4 my-16 md:my-24 flex flex-col gap-10 items-center">
+      
+      {/* 
+        Removed manual text sizing. Relying on global styles for the <h2> tag.
+      */}
+      <div className="flex flex-col items-center text-center gap-4">
+        <h2>Your Four-Step Journey</h2>
+        <p className="italic text-gray-600 max-w-2xl">
+          A clear, pressure-free path to finding the right support for your child.
+        </p>
       </div>
+      
+      {/* 
+        Grid layout strictly set for 4 steps (2x2 grid).
+      */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
+        {steps.map((step, index) => (
+          <div 
+            key={index} 
+            className="flex flex-col p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden"
+          >
+            {/* Top border accent for brand color impact */}
+            <div className="absolute top-0 left-0 w-full h-1 bg-purple-500 opacity-80"></div>
+            
+            {/* 
+              Vibrant circular indicators for higher impact.
+            */}
+            <div className="w-16 h-16 flex items-center justify-center bg-purple-100 text-purple-700 rounded-full font-bold text-2xl mb-6 shadow-sm">
+              {index + 1}
+            </div>
+            
+            <h3 className="text-xl font-bold mb-4 text-gray-900">
+              {step.title}
+            </h3>
+            
+            <p className="text-gray-600 leading-relaxed flex-grow">
+              {step.description}
+            </p>
+          </div>
+        ))}
+      </div>
+      
     </section>
   );
 }

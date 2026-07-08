@@ -4,13 +4,12 @@ import styles from "./Hero.module.scss";
 
 export default function Hero() {
   return (
-    <div className="hero-container relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="hero-container relative min-h-screen flex items-center justify-center">
       {/* 
-        Fixed the picture container: 
-        Added absolute positioning, inset-0, and a negative z-index so the images 
-        act strictly as a background pattern and do not disrupt the flex layout. 
+        Reverted the background image container to its original state. 
+        This removes the overriding opacity classes so your Hero.module.scss handles it correctly. 
       */}
-      <div className="landing-hero-pattern-container absolute inset-0 -z-10">
+      <div className="landing-hero-pattern-container">
         <picture>
           <source
             srcSet="/images/hero-pattern-mobile.png"
@@ -27,37 +26,25 @@ export default function Hero() {
           <img
             src="/images/hero-pattern.png"
             alt="roots and wings confetti pattern"
-            className="w-full h-full object-cover opacity-40"
           />
         </picture>
       </div>
 
-      <div className="container relative z-10 flex flex-col gap-10 md:gap-14 items-center text-center px-4 max-w-5xl">
+      {/* 
+        Consolidated everything into one main container to fix the top-heavy layout 
+        and restore a balanced vertical rhythm. 
+      */}
+      <div className="relative z-10 flex flex-col gap-8 md:gap-12 items-center text-center px-4 max-w-5xl">
         <div className="flex flex-col items-center gap-6">
           {/* 
-            Maintained the semantic <h1> tag for SEO, but overrode the global sizing 
-            using a CSS clamp. This ensures it scales fluidly and elegantly across devices.
-            "text-balance" prevents awkward trailing words.
+            Maintained the semantic <h1> tag but used Tailwind classes to control the size 
+            instead of inline styles, making it smaller and better balanced. 
           */}
-          <h1 
-            className="font-bold tracking-tight text-balance"
-            style={{ 
-              fontSize: "clamp(2.25rem, 5vw, 4rem)", 
-              lineHeight: "1.1", 
-              color: "var(--clr-black)" 
-            }}
-          >
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance max-w-4xl">
             Redesigning education for neurodivergent children and the families who love them.
           </h1>
           
-          {/* 
-            Optimized the copy: Removed the company definition (which is implied) 
-            and focused directly on the core philosophy and the immediate value provided.
-          */}
-          <p 
-            className="text-lg md:text-xl text-balance max-w-3xl"
-            style={{ opacity: 0.85, lineHeight: "160%", color: "var(--clr-black)" }}
-          >
+          <p className={`${styles.mainSubTitle} max-w-3xl`}>
             Children learn best when they feel safe, understood, and genuinely connected. Through bespoke tutoring, flexi-schooling, and our Connect-Ed Method, we build the academic and emotional foundations your child needs to thrive.
           </p>
         </div>
@@ -70,18 +57,8 @@ export default function Hero() {
             height={19}
             className="absolute top-0 left-0"
           />
-          <Link 
-            href="/#learnplaygrow" 
-            className="btn btn-primary"
-            style={{ 
-              backgroundColor: "var(--clr-black)", 
-              color: "var(--clr-white)", 
-              border: "none",
-              padding: "1rem 2.5rem",
-              fontWeight: "bold",
-              borderRadius: "0.5rem"
-            }}
-          >
+          {/* Reverted the Explore More button to its exact original styling */}
+          <Link href="/#learnplaygrow" className="btn btn-primary">
             Explore More
           </Link>
           <Image
@@ -93,13 +70,13 @@ export default function Hero() {
           />
         </div>
 
-        <div className="hand-drawn-arrow-container mt-4 xl:mt-8">
+        <div className="hand-drawn-arrow-container">
           <Image
             src="/svgs/drawn-arrow.svg"
             alt="hand drawn arrow"
             width={31}
             height={92}
-            className="hand-drawn-arrow opacity-80"
+            className="hand-drawn-arrow"
           />
         </div>
       </div>

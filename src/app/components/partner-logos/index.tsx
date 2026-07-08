@@ -2,9 +2,6 @@
 "use client";
 
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const logos = [
   { name: "MMM Main Logo", src: "/partnerlogos/Logo1.png" },
@@ -12,48 +9,36 @@ const logos = [
 ];
 
 export default function PartnerLogos() {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    // Since you only have 2 logos, we set slidesToShow to 2 
-    // to prevent slider duplication issues
-    slidesToShow: 2, 
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false,
-    responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 600, settings: { slidesToShow: 1 } }
-    ]
-  };
-
   return (
-    <section className="py-12 w-full overflow-hidden">
-      <div className="container mx-auto px-4 max-w-5xl">
-        <h3 className="text-center text-sm font-semibold text-gray-500 uppercase tracking-widest mb-8">
-          Trusted by
-        </h3>
-        <div className="w-full">
-          <Slider {...settings}>
-            {logos.map((logo, index) => (
-            <div key={index} className="outline-none flex justify-center items-center">
-  <img 
-    src={logo.src} 
-    alt={logo.name} 
-    // Removed 'grayscale' and 'opacity' to see if it renders clearly
-    className="h-20 w-auto object-contain" 
-    onError={(e) => {
-      e.currentTarget.style.display = 'none';
-      console.error(`Failed to load image: ${logo.src}`);
-    }}
-  />
-</div>
-            ))}
-          </Slider>
-        </div>
+    <section className="container mx-auto px-4 mt-16 md:mt-24 mb-4 md:mb-8 flex flex-col items-center">
+      
+      {/* 
+        Scaled up to text-3xl / text-4xl to ensure it holds visual weight on the page.
+        Reduced the bottom margin (mb-8) so it doesn't push the logos too far down.
+      */}
+      <h2 className="text-center text-3xl md:text-4xl font-bold uppercase tracking-widest mb-8">
+        Trusted by
+      </h2>
+      
+      {/* 
+        Static flex layout remains, but the container spacing is tighter.
+      */}
+      <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 w-full max-w-4xl">
+        {logos.map((logo, index) => (
+          <div key={index} className="flex justify-center items-center hover:opacity-80 transition-opacity">
+            <img 
+              src={logo.src} 
+              alt={logo.name} 
+              className="h-20 md:h-28 w-auto object-contain" 
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+                console.error(`Failed to load image: ${logo.src}`);
+              }}
+            />
+          </div>
+        ))}
       </div>
+      
     </section>
   );
 }

@@ -80,12 +80,19 @@ export default function Home() {
       <section>
         <Hero />
       </section>
+      
       <section id="learnplaygrow">
         <LearnPlayGrow />
       </section>
       <section>
         <OnboardingSteps />
       </section>
+
+      {/* Moved Purple CTA directly above Our Services */}
+      <section>
+        <CTA />
+      </section>
+
       <section>
         <ServiceGrid />
       </section>
@@ -98,10 +105,11 @@ export default function Home() {
       <section>
         <WhyUsWhyNow />
       </section>
+      
       <section className="border-b" id="testimonials">
         <Testimonials testimonials={testimonials} />
-        <CTA />
       </section>
+      
       <section>
         <LandingBlog />
       </section>
