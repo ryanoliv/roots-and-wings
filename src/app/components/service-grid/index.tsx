@@ -33,12 +33,10 @@ export default function ServiceGrid() {
         <h2>Our Services</h2>
       </div>
       
-      {/* Mirroring the flex/gap structure completely independently of the SCSS file */}
       <div className="flex flex-col md:flex-row gap-8 w-full justify-center">
         {services.map((service, index) => (
           <div
             key={index}
-            // Replaced styles.PricingCard with native Tailwind classes for layout and subtle hover effects
             className="flex flex-col p-8 w-full md:w-1/3 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300"
             style={{
               backgroundColor: service.bgColor,
@@ -49,10 +47,9 @@ export default function ServiceGrid() {
             {/* Section 1: Title and Tagline */}
             <div
               className="pb-6 flex flex-col gap-2"
-              // Using inline opacity for the border so it looks good on both light and dark cards
-              style={{ borderBottom: "1px solid currentColor", borderBottomOpacity: 0.15 }}
+              // FIX: Reverted to the standard var(--border) to satisfy TypeScript
+              style={{ borderBottom: "1px solid var(--border)" }}
             >
-              {/* Replaced styles.PricingCardType with standard Tailwind typography classes */}
               <h3 className="text-2xl font-bold">{service.title}</h3>
               <p style={{ color: "inherit", fontStyle: "italic", opacity: 0.9 }}>
                 {service.tagline}

@@ -106,7 +106,7 @@ export default function Home() {
         <WhyUsWhyNow />
       </section>
       
-      <section className="border-b" id="testimonials">
+      <section id="testimonials">
         <Testimonials testimonials={testimonials} />
       </section>
       
