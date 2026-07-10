@@ -1,7 +1,6 @@
 // src/app/components/service-grid/index.tsx
 import React from 'react';
 import Link from 'next/link';
-import styles from "../../our-programme/OurProgramme.module.scss";
 
 const services = [
   {
@@ -29,28 +28,32 @@ const services = [
 
 export default function ServiceGrid() {
   return (
-    <section className="container flex flex-col gap-10 items-center mx-auto px-4 my-16 md:my-24">
+    <div className="container flex flex-col gap-10 items-center mx-auto px-4 md:my-24">
       <div className="flex flex-col items-center text-center">
         <h2>Our Services</h2>
       </div>
       
-      {/* Mirroring the flex/gap structure but without the excessive padding */}
+      {/* Mirroring the flex/gap structure completely independently of the SCSS file */}
       <div className="flex flex-col md:flex-row gap-8 w-full justify-center">
         {services.map((service, index) => (
           <div
             key={index}
-            className={`${styles.PricingCard} flex flex-col p-8 w-full md:w-1/3 rounded-xl`}
+            // Replaced styles.PricingCard with native Tailwind classes for layout and subtle hover effects
+            className="flex flex-col p-8 w-full md:w-1/3 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300"
             style={{
               backgroundColor: service.bgColor,
               color: service.textColor,
+              border: service.bgColor === "var(--card-bg)" ? "1px solid var(--border)" : "none"
             }}
           >
             {/* Section 1: Title and Tagline */}
             <div
               className="pb-6 flex flex-col gap-2"
-              style={{ borderBottom: "1px solid var(--border)" }}
+              // Using inline opacity for the border so it looks good on both light and dark cards
+              style={{ borderBottom: "1px solid currentColor", borderBottomOpacity: 0.15 }}
             >
-              <h3 className={styles.PricingCardType}>{service.title}</h3>
+              {/* Replaced styles.PricingCardType with standard Tailwind typography classes */}
+              <h3 className="text-2xl font-bold">{service.title}</h3>
               <p style={{ color: "inherit", fontStyle: "italic", opacity: 0.9 }}>
                 {service.tagline}
               </p>
@@ -72,6 +75,6 @@ export default function ServiceGrid() {
           Explore Our Programmes
         </Link>
       </div>
-    </section>
+    </div>
   );
 }
