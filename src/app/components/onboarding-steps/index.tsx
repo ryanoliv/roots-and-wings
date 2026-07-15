@@ -30,38 +30,34 @@ export default function OnboardingSteps() {
       
       <div className="flex flex-col items-center text-center gap-4">
         <h2>Your Four-Step Journey</h2>
-        <p className="max-w-2xl text-gray-700" style={{ fontSize: "1.125rem" }}>
+        <p className="italic max-w-2xl" style={{ opacity: 0.8 }}>
           A clear, pressure-free path to finding the right support for your child.
         </p>
       </div>
       
-      {/* 2x2 Grid exactly mirroring the Unveil The Magic layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
         {steps.map((step, index) => (
           <div 
             key={index} 
-            className="flex flex-col p-8 md:p-10 bg-white"
-            style={{
-              borderRadius: "2rem", // matching the heavy rounding from the screenshot
+            className="flex flex-col p-8 md:p-10 rounded-2xl bg-white"
+            style={{ 
               border: `1px solid ${step.borderColor}`,
               boxShadow: "var(--card-shadow)",
+              color: "var(--clr-black)"
             }}
           >
-            {/* Acting as the "Icon": A color-coordinated step number 
-              to match the brand border color of the card.
-            */}
             <div 
-              className="text-3xl md:text-4xl font-black mb-6"
+              className="font-black text-5xl md:text-6xl mb-6"
               style={{ color: step.borderColor }}
             >
-              Step 0{index + 1}
+              0{index + 1}
             </div>
             
-            <h3 className="text-2xl mb-4 font-normal text-gray-900">
+            <h3 className="text-xl md:text-2xl font-bold mb-4" style={{ color: "inherit" }}>
               {step.title}
             </h3>
             
-            <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+            <p className="leading-relaxed flex-grow" style={{ opacity: 0.8 }}>
               {step.description}
             </p>
           </div>
