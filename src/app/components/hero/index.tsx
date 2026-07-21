@@ -34,18 +34,22 @@ export default function Hero() {
         Consolidated everything into one main container to fix the top-heavy layout 
         and restore a balanced vertical rhythm. 
       */}
-      <div className="relative z-10 flex flex-col gap-8 md:gap-12 items-center text-center px-4 max-w-5xl">
+      <div className="pt-14 relative z-10 flex flex-col gap-8 md:gap-9 items-center text-center px-4 max-w-5xl">
         <div className="flex flex-col items-center gap-6">
           {/* 
             Maintained the semantic <h1> tag but used Tailwind classes to control the size 
             instead of inline styles, making it smaller and better balanced. 
           */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance max-w-4xl">
-            Redesigning education for neurodivergent children and the families who love them.
+            Redesigning education for neurodivergent children and the families
+            who love them.
           </h1>
-          
+
           <p className={`${styles.mainSubTitle} max-w-3xl`}>
-            Children learn best when they feel safe, understood, and genuinely connected. Through bespoke tutoring, flexi-schooling, and our Connect-Ed Method, we build the academic and emotional foundations your child needs to thrive.
+            Children learn best when they feel safe, understood, and genuinely
+            connected. Through bespoke tutoring, flexi-schooling, and our
+            Connect-Ed Method, we build the academic and emotional foundations
+            your child needs to thrive.
           </p>
         </div>
 
