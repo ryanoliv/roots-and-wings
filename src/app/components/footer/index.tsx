@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col-reverse md:flex-row gap-md md:gap-xs items-center justify-between w-full">
             <span className={styles.footerCopywrite}>
-              &copy; 2024 Roots & Wings. All Rights Reserved.
+              &copy; 2026 Roots & Wings. All Rights Reserved.
             </span>
             <div className="flex gap-xs">
               <Link
@@ -91,7 +91,7 @@ export default function Footer() {
           </div>
           {/* <div className={styles.line}></div> */}
           <div className="w-full text-center">
-            <p className="text-sm text-[#b5b1ad]">
+            {/* <p className="text-sm text-[#b5b1ad]">
               Designed & Developed @{" "}
               <Link
                 href="https://www.konten.dev"
@@ -100,7 +100,7 @@ export default function Footer() {
               >
                 Konten
               </Link>
-            </p>
+            </p> */}
           </div>
           <div className="flex w-full justify-center">
             <p
