@@ -31,7 +31,7 @@ export default function Footer() {
                   </ul>
                 </div>
               </div>
-              <div className="flex flex-col gap-sm">
+              <div id="newsletter" className="flex flex-col gap-sm">
                 <p className={styles.footerSubscribeText}>
                   Subscribe to our newsletter to stay in touch with the latest.
                 </p>

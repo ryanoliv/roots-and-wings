@@ -20,19 +20,21 @@ export default function LearnPlayGrow() {
               their capacity to grow when the right conditions are in place.
               <br /> <br />
               Roots &amp; Wings was built on a simple observation: traditional
-              education structures do not always align with how neurodivergent
-              children learn best. Standardised pacing, performance-based
-              assessment and highly structured classroom environments work well
-              for some learners. For others, they can contribute to anxiety,
-              disengagement and a gradual erosion of confidence.
+              education isn&apos;t built around how neurodivergent children learn.
+              A one-size-fits-all pace, constant testing, rigid classroom
+              routines. These work well enough for some children. For others,
+              they slowly chip away at confidence, until anxiety and
+              disengagement take its place.
               <br /> <br />
-              We believe education can be designed more intelligently. Through the
-              Connect-Ed Method, we place self-regulation, emotional development
-              and relational safety at the centre of learning. These are not
-              add-ons. They are the foundation.
+              We think education can be designed more intelligently. The
+              Connect-Ed Method puts managing emotions, emotional development
+              and feeling safe with the people around them at the centre of
+              learning, not as add-ons but as the foundation everything else is
+              built on.
               <br /> <br />
-              When a child feels regulated, understood and genuinely engaged,
-              academic progress becomes sustainable. That is the work.
+              Because when a child feels calm, understood and genuinely
+              engaged, progress starts to hold. It stops being a battle. That
+              is the work.
             </p>
           </div>
         </div>

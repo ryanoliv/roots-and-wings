@@ -8,23 +8,27 @@ const services = [
     tagline:
       "Your child doesn’t need more pressure. They need someone who gets them.",
     description:
-      "We use the Connect-Ed Method to help your child re-engage with learning, rebuild confidence and make real academic progress. Every session is tailored to your child’s pace, learning profile and emotional state on that day.",
+      "We use the Connect-Ed Method to help your child re-engage with learning, rebuild confidence and make real academic progress. Every session is tailored to your child’s pace, learning profile and how they’re feeling that day.",
+    investment: "Investment: £320 per month",
     bgColor: "var(--card-bg)",
     textColor: "var(--clr-black)",
   },
   {
-    title: "Homeschool & flex-school",
-    tagline: "A complete education, built entirely around your child.",
+    title: "Coaching",
+    tagline: "One-to-one support for the child behind the schoolwork.",
     description:
-      "Whether you’re home educating full-time, flexi-schooling, or supporting a child who’s recently left school — we build a bespoke programme around your child. Academic structure and emotional safety, together.",
+      "Confidence, anxiety, focus, self-belief. Coaching gives your child dedicated time to build the emotional skills that make learning possible. Grounded in the Connect-Ed Method, every session meets your child where they are and grows with them.",
+    investment: "Investment: £1,200 for 12 weeks of support",
     bgColor: "var(--clr-black)",
     textColor: "var(--clr-white)",
   },
   {
-    title: "Emotional Resilience products",
-    tagline: "The tools from our sessions, now for home and classroom.",
+    title: "Homeschool and flexi-school",
+    tagline: "A complete education, built entirely around your child.",
     description:
-      "12 animal characters. 12 emotional skills. One beautifully designed resource that children return to again and again. Our curriculum and workbooks are grounded in the Connect-Ed Method.",
+      "Whether you’re home educating full-time, flexi-schooling, or supporting a child who’s recently left school, we build a bespoke programme around your child. Academic structure and emotional safety, together.",
+    investment:
+      "Investment: £1,920 per month for 6 hours of tutoring a week",
     bgColor: "var(--card-bg)",
     textColor: "var(--clr-black)",
   },
@@ -66,11 +70,14 @@ export default function ServiceGrid() {
             </div>
 
             {/* Section 2: Main Description */}
-            <div className="pt-6 flex flex-col flex-grow">
+            <div className="pt-6 flex flex-col flex-grow gap-4">
               <p
                 style={{ color: "inherit", lineHeight: "160%", opacity: 0.85 }}
               >
                 {service.description}
+              </p>
+              <p style={{ color: "inherit", fontWeight: 600 }}>
+                {service.investment}
               </p>
             </div>
           </div>

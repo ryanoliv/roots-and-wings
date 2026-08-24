@@ -5,12 +5,7 @@ export default function OurTutorsHave() {
   return (
     <div className="mx-auto">
       <div className="flex flex-col gap-sm">
-        <h3
-          className="text-center"
-          style={{ fontFamily: "var(--font-heading)", fontSize: "2.2rem" }}
-        >
-          Our Tutors Have:
-        </h3>
+        <h2 className="text-center">Our Tutors Have:</h2>
         <div className="flex flex-col md:flex-row gap-md xl:gap-xl">
           <div className="flex flex-col gap-md items-center">
             <Image

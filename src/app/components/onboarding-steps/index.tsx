@@ -3,27 +3,27 @@ import React from "react";
 
 const steps = [
   {
-    title: "Book a free discovery call",
+    title: "First, we help them feel safe",
     description:
-      "Every Roots & Wings journey begins with a conversation — not a sales pitch. We want to hear about your child: what they find hard, what lights them up, and what you’ve already tried. This call is free, relaxed and completely without obligation.",
+      "Nothing sinks in while a child feels anxious or on edge. So we start by helping yours feel calm, settled and genuinely at ease with us — because a relaxed child is a child who's ready to take things in.",
     borderColor: "var(--clr-purple)",
   },
   {
-    title: "We match your child with the right programme",
+    title: "Then we build their belief",
     description:
-      "Using everything we learn on the discovery call — your child’s learning profile, emotional needs, diagnosis, and goals — we recommend the right fit. That might be after-school tutoring, a flex-school arrangement, or a full homeschool programme.",
+      "So many children have quietly decided they're \"no good\" at something. We gently rebuild that, growing the confidence and self-belief that makes a child want to have a go, even at the things they've found hard before.",
     borderColor: "var(--clr-yellow)",
   },
   {
-    title: "Choose your programme",
+    title: "Now the real learning grows",
     description:
-      "Whether you’re looking for confidence-building after-school sessions, a bespoke homeschool curriculum, or our full 12-week Wellbeing Programme — we’ll talk you through the options clearly, with no jargon and no pressure.",
+      "With a settled, willing child, teaching finally does what it's meant to. We build the skills — maths, phonics, reading, thinking, problem-solving — through the ways children learn best, at a pace that's theirs and never forced.",
     borderColor: "var(--clr-turq)",
   },
   {
-    title: "Your child begins their journey",
+    title: "And it stays with them",
     description:
-      "From the very first session, your child is met with warmth, curiosity and a complete absence of pressure. We move at their pace. We celebrate what they can do. And we keep you closely involved every step of the way.",
+      "Because it's rooted in something deeper than pressure and repetition, the change tends to last. Children don't just catch up, they carry a new relationship with learning into everything they do next.",
     borderColor: "var(--clr-red)",
   },
 ];

@@ -77,6 +77,9 @@ function PrevArrow(props: any) {
 export default function TestimonialsCarousel({
   testimonials,
 }: TestimonialsCarouselProps) {
+  const sortedTestimonials = [...testimonials].sort(
+    (a, b) => b.testimonial.length - a.testimonial.length
+  );
   const [centerPadding, setCenterPadding] = useState("50px");
   const [variableWidth, setVariableWidth] = useState(true);
 
@@ -99,7 +102,7 @@ export default function TestimonialsCarousel({
   }, []);
 
   const carouselSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: true,
     pauseOnHover: true,
@@ -117,7 +120,7 @@ export default function TestimonialsCarousel({
   return (
     <div>
       <Slider {...carouselSettings}>
-        {testimonials.map((testimonial) => (
+        {sortedTestimonials.map((testimonial) => (
           <div key={testimonial.id} className={styles.testimonialsCard}>
             <p className={styles.testimonialQuote}>{testimonial.testimonial}</p>
             <div className="flex flex-col">

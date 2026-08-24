@@ -8,7 +8,7 @@ import LandingBlog from "./blog/components/landing-blog";
 import OnboardingSteps from "./components/onboarding-steps";
 import ServiceGrid from "./components/service-grid";
 import PartnerLogos from "./components/partner-logos";
-import PricingSection from "./components/pricing-section";
+import MediaMentions from "./components/media-mentions";
 
 export const metadata: Metadata = {
   title: "Roots & Wings | Specialist Tutoring For Growth",
@@ -180,6 +180,34 @@ const testimonials = [
     testimonial:
       "I fully recommend Ally for her exceptional tutoring services... Through Ally's unique and empathetic approach, my daughter has made remarkable progress in all these areas.",
   },
+  {
+    id: 19,
+    name: "Lisa Hyde",
+    title: "Google Review",
+    testimonial:
+      "We are so grateful to Ally and everyone at Roots and Wings for the incredible support they have given Billy. After experiencing significant school trauma, he had completely lost trust in learning, but Ally immediately understood that emotional safety had to come first. Her calm, patient and relationship-based approach helped Billy begin to rebuild his confidence, engage with learning again and experience success without pressure. What impressed us most was how deeply Ally understood Billy's needs. She saw beyond his anxiety and recognised his strengths, adapting every session to suit him as an individual. Her report perfectly captured both his challenges and his potential, and we wouldn't hesitate to recommend Roots and Wings to any family looking for a compassionate, trauma-informed approach to supporting their child.",
+  },
+  {
+    id: 20,
+    name: "Neil Wiseman",
+    title: "Google Review",
+    testimonial:
+      "Ally have been working with our son for 4 months now. He had been out of education for 2 years prior and didn't achieve much while there. They have been so good with him, he has come on leaps and bounds in such a short amount of time. It just shows what can be achieved when people care and understand. We would recommend Roots & Wings to everyone.",
+  },
+  {
+    id: 21,
+    name: "Hayley",
+    title: "Google Review",
+    testimonial:
+      "I found Roots & Wings when searching for neuro-affirming tutors for my 10 year old AuDHD son who had been out of education for several years. I interviewed multiple tutors and only after speaking with Ally & Sarah did I really feel as though I had found people who understood what we were looking for. They understood when I said the traditional/stereotypical techniques used in SEN/mainstream schools wouldn't work for my son, and when they first met him they listened to his interests and tailored this to him perfectly. He was immediately engaged and interested in what they had to say. He is now engaging in learning which we were told wouldn't be possible and had flatly refused to do with previous tutors. Splitting the work between two tutors has worked well for us — even Sarah's guinea pigs have been helping! Who knew all it would take would be a pair of guinea pigs to sit on his lap to motivate him to write a book. Ally has been great in showing Wyatt how to manage his emotions and using games as an opportunity to learn. Sarah's performative and enthusiastic nature has helped steer Wyatt back on track when his ADHD is squirrelling away. We are really pleased with how the last 4 months is going and can't wait to see what they achieve with him.",
+  },
+  {
+    id: 22,
+    name: "Sherree Kendall",
+    title: "Google Review",
+    testimonial:
+      "We have known Ally for a number of years, she has been close with our family and remains so. A wonderfully caring, curious and engaging professional, I trust her judgement and insight. She has had such a positive impact with the work she does and I know we will work together again! I value her very much.",
+  },
 ];
 
 export default function Home() {
@@ -205,7 +233,7 @@ export default function Home() {
         <PartnerLogos />
       </section>
       <section>
-        <PricingSection />
+        <MediaMentions />
       </section>
       <section>
         <WhyUsWhyNow />

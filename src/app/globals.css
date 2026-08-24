@@ -62,7 +62,8 @@
 
   --header-gradient: 247, 242, 236;
 
-  --font-heading: "Winkle", "Arial Rounded MT Bold", "Comic Sans MS", sans-serif;
+  --font-heading:
+    "Winkle", "Arial Rounded MT Bold", "Comic Sans MS", sans-serif;
   --font-body: "Glacial Indifference", "Helvetica", "Arial", sans-serif;
 }
 
@@ -82,7 +83,9 @@ body {
   font-family: var(--font-body);
 
   /* transition */
-  transition: opacity 500ms ease-in-out, background-color 500ms ease-in-out,
+  transition:
+    opacity 500ms ease-in-out,
+    background-color 500ms ease-in-out,
     transform 500ms ease-in-out;
 }
 
@@ -220,7 +223,9 @@ p {
   padding: 0.875em 1.375em;
   border: 2px solid var(--clr-black);
   border-radius: 35px;
-  box-shadow: 0 0 0 2px white inset, 0px 1px 2px 0px rgba(0, 0, 0, 0.45);
+  box-shadow:
+    0 0 0 2px white inset,
+    0px 1px 2px 0px rgba(0, 0, 0, 0.45);
   font-weight: 500;
   color: var(--clr-white);
   line-height: 150%;
@@ -633,6 +638,14 @@ p {
   }
 }
 
+@media (max-width: 550px) {
+  .landing-hero-pattern-container {
+    top: unset;
+    bottom: 0;
+    left: 0;
+  }
+}
+
 @media (max-width: 450px) {
   .hero-container,
   .nav-container {
@@ -659,11 +672,11 @@ p {
     padding-inline: 0;
   }
 
-  .landing-hero-pattern-container {
+  /* .landing-hero-pattern-container {
     top: unset;
     bottom: 0;
     left: 0;
-  }
+  } */
 
   .hand-drawn-arrow-container {
     bottom: 5%;
@@ -751,6 +764,6 @@ p {
   }
 
   .landing-hero-pattern-container {
-    bottom: -5%;
+    bottom: -10%;
   }
 }
