@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import gsap from "gsap";
 import Loader from "../loader";
 
 interface ContentLoaderProps {
@@ -21,18 +20,6 @@ const ContentLoader: React.FC<ContentLoaderProps> = ({ children }) => {
     }, 7000);
 
     return () => clearTimeout(fallbackTimeout);
-  }, [isLoading]);
-
-  useEffect(() => {
-    if (!isLoading) {
-      const content = document.getElementById("main-content");
-      if (content) {
-        gsap.to(content, {
-          opacity: 1,
-          duration: 0.6,
-        });
-      }
-    }
   }, [isLoading]);
 
   const handleLoaderComplete = () => {

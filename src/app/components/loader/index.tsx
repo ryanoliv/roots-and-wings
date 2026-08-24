@@ -65,24 +65,63 @@ export default function Loader({ onComplete }: LoaderProps) {
 
     gsap.set(elements, { opacity: 0, x: 200 });
 
-    const tl = gsap.timeline({
-      delay: 0.5,
-      onComplete: () => {
-        if (isActiveRef.current) onCompleteRef.current();
-      },
-    });
+    // Wait for the logo SVGs to actually finish loading before starting the
+    // reveal, so we never animate in blank/broken images.
+    const imagesLoaded = Promise.all(
+      elements.map(
+        (img) =>
+          new Promise<void>((resolve) => {
+            if (img.complete) {
+              resolve();
+            } else {
+              img.addEventListener("load", () => resolve(), { once: true });
+              img.addEventListener("error", () => resolve(), { once: true });
+            }
+          })
+      )
+    );
 
-    tl.to(elements, {
-      opacity: 1,
-      x: 0,
-      duration: 0.4,
-      stagger: 0.1,
-      ease: "power2.out",
+    let tl: gsap.core.Timeline | null = null;
+    let completed = false;
+
+    // The GSAP timeline runs on requestAnimationFrame, which browsers pause
+    // or heavily throttle while the tab is backgrounded (e.g. a link opened
+    // in a new tab that isn't looked at right away). Without a watchdog, the
+    // animation can stall indefinitely while frozen mid-flight and never
+    // call onComplete — this is what made the loader look like it "never
+    // finishes" before content appears. `tl.progress(1)` snaps the letters
+    // straight to their finished state (no rAF needed) before we hand off,
+    // so the reveal always lands cleanly instead of getting cut off.
+    const finish = () => {
+      if (completed || !isActiveRef.current) return;
+      completed = true;
+      tl?.progress(1);
+      onCompleteRef.current();
+    };
+
+    const watchdog = window.setTimeout(finish, 4000);
+
+    imagesLoaded.then(() => {
+      if (completed || !isActiveRef.current) return;
+
+      tl = gsap.timeline({
+        delay: 0.5,
+        onComplete: finish,
+      });
+
+      tl.to(elements, {
+        opacity: 1,
+        x: 0,
+        duration: 0.4,
+        stagger: 0.1,
+        ease: "power2.out",
+      });
     });
 
     return () => {
       isActiveRef.current = false;
-      tl.kill();
+      window.clearTimeout(watchdog);
+      tl?.kill();
     };
   }, []);
 
