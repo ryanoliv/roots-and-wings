@@ -16,12 +16,8 @@ export default function Hero() {
             media="(max-width: 500px)"
           />
           <source
-            srcSet="/images/hero-pattern-tablet.png"
-            media="(max-width: 1024px)"
-          />
-          <source
             srcSet="/images/hero-pattern.png"
-            media="(min-width: 1025px)"
+            media="(min-width: 501px)"
           />
           <img
             src="/images/hero-pattern.png"

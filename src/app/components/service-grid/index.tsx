@@ -28,7 +28,7 @@ const services = [
     description:
       "Whether you’re home educating full-time, flexi-schooling, or supporting a child who’s recently left school, we build a bespoke programme around your child. Academic structure and emotional safety, together.",
     investment:
-      "Investment: £1,920 per month for 6 hours of tutoring a week",
+      "Investment: EOTAS funding options are available, POA - get in touch to discuss",
     bgColor: "var(--card-bg)",
     textColor: "var(--clr-black)",
   },
@@ -57,7 +57,7 @@ export default function ServiceGrid() {
           >
             {/* Section 1: Title and Tagline */}
             <div
-              className="pb-6 flex flex-col gap-2"
+              className="pb-6 flex flex-col gap-2 justify-between"
               // FIX: Reverted to the standard var(--border) to satisfy TypeScript
               style={{ borderBottom: "1px solid var(--border)" }}
             >

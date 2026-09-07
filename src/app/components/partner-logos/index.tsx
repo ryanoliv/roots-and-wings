@@ -17,13 +17,13 @@ export default function PartnerLogos() {
       {/* Restored the global typography standard for the H2 tag */}
       <h2 className="text-center mb-10">Trusted by</h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 w-full max-w-6xl">
+      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 w-full max-w-6xl">
         {logos.map((logo, index) => (
-          <div key={index} className="flex justify-center items-center">
+          <div key={index} className="flex justify-center items-center md:flex-1">
             <img
               src={logo.src}
               alt={logo.name}
-              className="max-h-16 md:max-h-24 w-auto max-w-full object-contain mix-blend-multiply"
+              className="max-h-20 md:max-h-24 w-auto max-w-full object-contain mix-blend-multiply"
               onError={(e) => {
                 e.currentTarget.style.display = "none";
                 console.error(`Failed to load image: ${logo.src}`);
