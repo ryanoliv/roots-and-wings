@@ -34,11 +34,13 @@ export default function Hero() {
 
           <p className={`${styles.mainSubTitle} max-w-3xl`}>
             Every family deserves an education path that works for them. We
-            work with children who&apos;ve switched off from learning, through
-            one-to-one and group tutoring, flexi-schooling and home
-            education. Our evidence-informed Connect-Ed Method draws on
-            emotional regulation, cognitive development and play to help
-            children find their desire to learn again.
+            work with children who are finding school really hard right now,
+            whether they&apos;re struggling to attend, or they&apos;re there
+            every day but lacking confidence or unable to access their
+            learning. It isn&apos;t because they&apos;re not trying. Through
+            tutoring, coaching, flexi-schooling and home education, our
+            Connect-Ed Method helps them feel safe first, so they can believe
+            in themselves and learn again.
           </p>
         </div>
 

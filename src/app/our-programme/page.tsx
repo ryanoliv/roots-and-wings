@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import CTA from "../components/cta";
-import Pricing from "./components/pricing";
+// import Pricing from "./components/pricing"; // Replaced by Faq below — kept for reference, not deleted.
+import Faq from "./components/faq";
 import UnveilTheMagic from "./components/unveilthemagic";
 import YourJourney from "./components/yourjourney";
 
@@ -27,7 +28,8 @@ export default function OurProgramme() {
         <UnveilTheMagic />
       </section>
       <section id="pricing">
-        <Pricing />
+        {/* <Pricing /> — hidden for now, replaced by Faq below. Not deleted. */}
+        <Faq />
         <CTA />
       </section>
     </>

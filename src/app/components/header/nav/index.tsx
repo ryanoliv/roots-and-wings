@@ -42,7 +42,7 @@ export default function Nav({ isNavOpen, setIsNavOpen }: NavProps) {
             className={`gap-xs items-center ${styles.navLink}`}
             onClick={closeNav}
           >
-            Our Programme{" "}
+            Our Services{" "}
             <div className={`drop-down-arrow ${arrowClassName}`}>
               <Image
                 src="/svgs/drop-down-arrow.svg"
@@ -105,7 +105,7 @@ export default function Nav({ isNavOpen, setIsNavOpen }: NavProps) {
             className={`gap-xs items-center ${styles.navLink}`}
             onClick={closeNav}
           >
-            Our Programme{" "}
+            Our Services{" "}
             <div className={`drop-down-arrow ${arrowClassName}`}>
               <Image
                 src="/svgs/drop-down-arrow.svg"

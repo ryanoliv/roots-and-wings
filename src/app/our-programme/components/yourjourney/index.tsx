@@ -8,36 +8,36 @@ const steps = [
     blobSrc: "/svgs/blob-purp.svg",
     blobAlt: "purple blob",
     stepNumber: "Step 1",
-    title: "Book a complimentary consultation",
+    title: "Book a free consultation",
     description:
-      "At the heart of our approach lies the importance of building meaningful connections. Our educational specialists prioritise getting to know both you and your child, taking the time to understand their unique needs and learning preferences on a deeper level. By fostering this collaborative and personalised approach, we aim to empower your child to thrive academically and beyond.",
+      "Tell us about your child: what's been hard, what they love, and what you've already tried. Together we'll work out which support fits best, whether that's after-school tutoring, coaching, or home education and flexi-school. If your child has an EHCP, we'll talk through how funding might work. There's no pressure, and if we're not the right fit, we'll point you towards something that might help.",
     stepClr: "var(--clr-purple)",
   },
   {
     blobSrc: "/svgs/blob-yellow.svg",
     blobAlt: "yellow blob",
     stepNumber: "Step 2",
-    title: "Get matched with your Roots & Wings expert",
+    title: "Home visit",
     description:
-      "Tailoring our approach to your child's individual requirements, we carefully assess their strengths, weaknesses, and learning style to recommend the most suitable tutor for their Roots to Wings journey. By understanding their unique needs, we can provide a personalised tutoring experience that maximises trust, understanding, and confidence. Your child will receive both academic support and emotional guidance to foster their overall growth and development.",
+      "We come to you. Meeting your child at home, where they feel most comfortable, lets us get to know them properly: their strengths, their needs and how they like to learn. If online, we book a call in with you and your child. An hour to get to know them.",
     stepClr: "var(--clr-yellow)",
   },
   {
     blobSrc: "/svgs/blob-turq.svg",
     blobAlt: "turq blob",
     stepNumber: "Step 3",
-    title: "Select your Programme",
+    title: "Meet your Roots & Wings expert",
     description:
-      "Whether you are looking for academic tutoring or our wellbeing programme. We are here to support you and your child’s needs. We help children that are struggling with anxious mindsets, friendships, challenges or barriers to learning.  Go from struggling to thriving resulting in resilient, confident and engaged learners.",
+      "We match your child with the tutor or coach most likely to click with them. That relationship matters more than anything else, because a child who feels understood is a child who's ready to learn.",
     stepClr: "var(--clr-turq)",
   },
   {
     blobSrc: "/svgs/blob-red.svg",
     blobAlt: "red blob",
     stepNumber: "Step 4",
-    title: "Start your Programme",
+    title: "Start, and see the difference",
     description:
-      "Through collaboration and support, we empower your child to fully embrace their unique qualities and abilities.",
+      "Sessions begin, in your home or online. Every session starts by settling your child, then the work builds from there. You're kept in the loop through our parent WhatsApp group and regular feedback sessions, so you always know how they're getting on and what's coming next.",
     stepClr: "var(--clr-red)",
   },
   // {
@@ -71,18 +71,26 @@ const steps = [
 
 export default function YourJourney() {
   return (
-    <div className="flex flex-col pt-lg">
+    <div className="flex flex-col pt-lg md:pt-0">
       <div className="container flex flex-col md:flex-row w-full justify-between gap-xl md:gap-md items-start">
         <div className={styles.yourJourneyStickyContainer}>
           <div className="flex flex-col gap-xs text-center md:text-start">
-            <h1>Your Journey</h1>
+            <h1>Our Services</h1>
+            <p className="italic" style={{ opacity: 0.8 }}>
+              Every family deserves an education path that works for them.
+            </p>
             <p style={{ maxWidth: "505px" }}>
-              Watch your child go from struggling to thriving! Guiding you on
-              each step of our journey together. Whether you are choosing our
-              academic tutoring or our wellbeing programme, our 4 step approach:
-              Connect, Empower, Cultivate and Enhance transforms your child into
-              a confident, resilient and engaged learner! It&apos;s the
-              parents&apos; journey as much as the child&apos;s.
+              We work with children who are finding school really hard right
+              now, whether they&apos;re struggling to attend or they&apos;re
+              there every day struggling to access their learning. We support
+              them through one-to-one and group tutoring, coaching,
+              flexi-schooling and home education.
+              <br />
+              <br />
+              That includes children with SEND and those with EHCPs, and
+              children dealing with anxiety, emotionally based school
+              avoidance, ADHD, autism, dyslexia and other specific learning
+              difficulties.
             </p>
           </div>
           <CalendlyCTA />
@@ -98,6 +106,13 @@ export default function YourJourney() {
           </div>
         </div>
         <div className="flex flex-col gap-lg text-center md:text-start">
+          <div className="flex flex-col gap-xs">
+            <h2>How it works</h2>
+            <p className="italic" style={{ opacity: 0.8 }}>
+              Starting with us is simple, and you&apos;re involved at every
+              step.
+            </p>
+          </div>
           {steps.map((step, index) => (
             <div
               key={index}

@@ -1,6 +1,8 @@
 .yourJourneyStickyContainer {
   position: sticky;
-  top: 208px;
+  top: 180px;
+  width: 560px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--gap-md);
@@ -22,7 +24,8 @@
     padding: 3rem;
     background-color: var(--card-bg);
     border-radius: 24px;
-    max-width: 640px;
+    width: 640px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -30,7 +33,7 @@
     text-align: start;
 
     @media (max-width: 1280px) {
-      max-width: 570px;
+      width: 570px;
     }
 
     @media (max-width: 450px) {

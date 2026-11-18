@@ -5,6 +5,11 @@ import styles from "../../OurProgramme.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import Separator from "@/app/components/separator";
+import CalendlyCTA from "@/app/components/calendlyCTA";
+
+type ExpandedBlock =
+  | { type: "paragraph"; text: string }
+  | { type: "list"; title?: string; items: string[] };
 
 interface Card {
   imgSrc: string;
@@ -15,6 +20,8 @@ interface Card {
   description: string;
   listTitle: string;
   listItems: string[];
+  expandedBlocks?: ExpandedBlock[]; // Ordered paragraphs/lists shown instead of listTitle/listItems when expanded
+  showCalendlyCTA?: boolean; // Show the "Book a Consultation" button in the expanded area
   borderColor: string;
   linkTextBefore?: string; // Text before the link
   linkText?: string; // The actual link text
@@ -28,16 +35,45 @@ const cards: Card[] = [
     imgAlt: "purple rainbow",
     imgWidth: 71,
     imgHeight: 40,
-    title: "The Roots & Wings Way",
-    description:
-      "Recognising the core principles in education is pivotal; it's where the magic unfolds. Our Roots & Wings Way consists of four main pillars.",
-    listTitle: "Our four pillars:",
-    listItems: [
-      "Wellbeing underpins success",
-      "Play is the child's work",
-      "The brain is incredibly malleable",
-      "21st century skills start with us",
+    title: "Home education and flexi-school",
+    description: "A complete education, built entirely around your child.",
+    listTitle: "",
+    listItems: [],
+    expandedBlocks: [
+      {
+        type: "paragraph",
+        text: "Whether you’re home educating full-time, flexi-schooling, or supporting a child who’s recently left school, we build a bespoke programme around your child, with academic structure and emotional safety together.",
+      },
+      {
+        type: "list",
+        items: [
+          "A complete primary curriculum (ages 5–11) following the National Curriculum: English, maths, science and history",
+          "Specialist programmes: reading built on the Science of Reading, Singapore Maths, and self-regulation through our own Roots to Wings programme",
+          "Learning beyond the desk: forest school time through our outdoor learning partnership",
+          "Sensory-informed support: through our collaboration with Natasha Grays at The Sensory Haven",
+          "Holiday club: steady routines and friendships through the school breaks",
+        ],
+      },
+      {
+        type: "list",
+        title: "Investment",
+        items: [
+          "POA. EOTAS, EHCP, personal budget and school funding options available. Payment plans available on request.",
+        ],
+      },
+      {
+        type: "list",
+        title: "Every place includes:",
+        items: [
+          "Up to six hours of one-to-one teaching a week (24 hours a month) — can be less or more depending on your family’s needs",
+          "All planning, preparation and resources, done for you",
+          "Ongoing parent feedback via our WhatsApp group",
+          "A monthly parent feedback session and report writing",
+          "Holiday club",
+        ],
+      },
     ],
+    showCalendlyCTA: true,
     borderColor: "var(--clr-purple)",
   },
   {
@@ -45,31 +81,62 @@ const cards: Card[] = [
     imgAlt: "hierarchy laddder",
     imgWidth: 52,
     imgHeight: 40,
-    title: "Our Method",
+    title: "Simon’s Circle: our picture book",
     description:
-      "We empower children to reach their potential through supportive, nurturing connections that foster personal and collective growth.",
-    listTitle: "Our method:",
-    listItems: ["Connect", "Empower", "Cultivate", "Enhance"],
+      "A rhyming picture book about friendship, belonging and finding your place.",
+    listTitle: "",
+    listItems: [],
+    expandedBlocks: [
+      {
+        type: "paragraph",
+        text: "Meet Simon, a little swallow who learns that he doesn’t have to fly alone. Simon’s Circle is a gentle, rhyming story for children aged 5 to 7 about friendship, belonging and the people who help us feel at home.",
+      },
+      {
+        type: "paragraph",
+        text: "Simon is one of the characters children meet in our coaching programme, and now he has a story of his own. Created by Steve, Alex and Sarah, every word and every picture is made by hand.",
+      },
+      {
+        type: "paragraph",
+        text: "It’s lovely for bedtime, the classroom, or any time your child needs reminding that they belong.",
+      },
+    ],
     borderColor: "var(--clr-yellow)",
+    linkText: "Order your copy",
+    linkUrl: "https://buy.stripe.com/5kQ4gy8hu6yy2Oa6JLeAg00",
   },
   {
     imgSrc: "/svgs/whoitsfor.svg",
     imgAlt: "people",
     imgWidth: 48,
     imgHeight: 50,
-    title: "Who It’s For",
+    title: "After-school tutoring",
     description:
-      "We help children aged 5 to 11 to thrive through tailored support, fostering growth, confidence, and essential skills for future success.",
-    listTitle: "Does your child:",
-    listItems: [
-      "Get frustrated by setbacks and lack resilience?",
-      "Have a negative attitude towards school work?",
-      "Act disruptively in class?",
-      "Struggle with confidence and communication?",
-      "Hesitate to participate in class?",
-      "Have trouble transitioning between year levels?",
-      "Fear making mistakes?",
+      "Your child doesn’t need more pressure. They need someone who gets them.",
+    listTitle: "",
+    listItems: [],
+    expandedBlocks: [
+      {
+        type: "paragraph",
+        text: "By the end of a school day, most children have used up everything they’ve got, so the last thing they need is more of the same. Every session starts by settling your child and checking in on how they’re doing. Then we tailor the work to their pace, their learning profile and how they’re feeling that day. Confidence comes first, because often the block isn’t ability, it’s belief. The aim is real academic progress, not just a nicer hour after school.",
+      },
+      {
+        type: "list",
+        title: "Investment",
+        items: [
+          "One-to-one: £320 per month",
+          "Small group: £220 per month per child (up to four children, minimum three to run)",
+        ],
+      },
+      {
+        type: "list",
+        title: "Every place includes:",
+        items: [
+          "One hour a week, four sessions a month, in your home or online",
+          "Whatsapp parent feedback group",
+        ],
+      },
     ],
+    showCalendlyCTA: true,
     borderColor: "var(--clr-turq)",
   },
   {
@@ -77,21 +144,52 @@ const cards: Card[] = [
     imgAlt: "star",
     imgWidth: 50,
     imgHeight: 49,
-    title: "Benefits For Your Child",
-    description:
-      "We prioritise emotional and mental health, engaging in playful learning for a comprehensive educational experience.",
+    title: "Coaching",
+    description: "One-to-one support for the child behind the schoolwork.",
     listTitle: "",
-    listItems: [
-      "Strong emotional and mental health foundations",
-      "Engaging, practical learning through play",
-      "Enhanced brain development",
-      "Fostered critical thinking, collaboration, creativity, communication and care",
+    listItems: [],
+    expandedBlocks: [
+      {
+        type: "paragraph",
+        text: "Sometimes what’s getting in the way isn’t the maths or the reading. It’s the worry underneath, the focus that won’t settle, the quiet belief that they can’t. Over twelve weeks, your child meets a new animal character each week, and each one brings a message and a tool that becomes theirs to keep.",
+      },
+      {
+        type: "list",
+        items: [
+          "Callie the Chameleon: Wellbeing",
+          "Olly & Fitz: Self-regulation",
+          "Winston the Whale: Calmness",
+          "Molly the Meerkat: Special skills",
+          "Lesedi the Lion: Self-expression",
+          "Simon the Swallow: Community",
+          "Jerry the Giraffe: Feelings",
+          "Penelope the Penguin: Self-talk",
+          "Ella & Mooki: Boundaries",
+          "Baya the Butterfly: Mindset",
+          "Harambe the Honey Badger: Courage",
+          "Ottie the Otter: Goals",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The characters build on each other, so by the end it all fits together.",
+      },
+      {
+        type: "list",
+        title: "Investment",
+        items: ["£1,200 for 12 weeks. Payment plans available on request."],
+      },
+      {
+        type: "list",
+        title: "Every place includes:",
+        items: [
+          "One hour a week, 12 sessions in total, in your home or online",
+          "Three parent feedback sessions, at the start, middle and end",
+        ],
+      },
     ],
+    showCalendlyCTA: true,
     borderColor: "var(--clr-red)",
-    linkTextBefore: "Read the ",
-    linkText: "testimonials",
-    linkUrl: "/#testimonials",
-    linkTextAfter: " for the proof in the pudding.",
   },
 ];
 
@@ -106,12 +204,10 @@ export default function UnveilTheMagic() {
     <div className="flex flex-col pt-0 md:pt-lg">
       <div className="container flex flex-col gap-xl">
         <div className="flex flex-col items-center">
-          <h2>Let&apos;s Unveil The Magic</h2>
+          <h2>Our Services</h2>
           <p style={{ maxWidth: "821px", textAlign: "center" }}>
-            Understanding our methodology is paramount, as it lays the
-            groundwork for fostering growth and success in your child. Take a
-            closer look at The Roots & Wings Way, Who It&apos;s for, Our Method
-            and Benefits for Your Child.
+            Four ways we can help, one way of working. Tap each to find out
+            more.
           </p>
         </div>
         <div className="flex gap-md justify-center items-start flex-wrap">
@@ -154,16 +250,48 @@ export default function UnveilTheMagic() {
               </button>
               {openStates[index] && (
                 <div>
-                  <p style={{ fontSize: "1.2rem" }}>{card.listTitle}</p>
-                  <ul className="flex flex-col list-disc ml-sm">
-                    {card.listItems.map((item, itemIndex) => (
-                      <li key={itemIndex}>{item}</li>
-                    ))}
-                  </ul>
+                  {card.expandedBlocks ? (
+                    <div className="flex flex-col gap-sm">
+                      {card.expandedBlocks.map((block, bIndex) =>
+                        block.type === "paragraph" ? (
+                          <p key={bIndex}>{block.text}</p>
+                        ) : (
+                          <div key={bIndex}>
+                            {block.title && (
+                              <p style={{ fontSize: "1.2rem" }}>{block.title}</p>
+                            )}
+                            <ul className="flex flex-col list-disc ml-sm">
+                              {block.items.map((item, itemIndex) => (
+                                <li key={itemIndex}>{item}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )
+                      )}
+                    </div>
+                  ) : (
+                    <>
+                      <p style={{ fontSize: "1.2rem" }}>{card.listTitle}</p>
+                      <ul className="flex flex-col list-disc ml-sm">
+                        {card.listItems.map((item, itemIndex) => (
+                          <li key={itemIndex}>{item}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                  {card.showCalendlyCTA && (
+                    <div className="mt-md">
+                      <CalendlyCTA />
+                    </div>
+                  )}
                   {card.linkUrl && (
                     <p className="mt-md">
                       {card.linkTextBefore}
-                      <Link href={card.linkUrl} className="underline font-bold">
+                      <Link
+                        href={card.linkUrl}
+                        className="underline font-bold"
+                        target={card.linkUrl.startsWith("http") ? "_blank" : undefined}
+                      >
                         {card.linkText}
                       </Link>
                       {card.linkTextAfter}
