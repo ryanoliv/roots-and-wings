@@ -31,7 +31,7 @@ export default function Hero() {
             Redesigning Learning
           </h1>
 
-          <p className={`${styles.mainSubTitle} max-w-3xl`}>
+          <p className={styles.mainSubTitle}>
             We work with children who are finding school really hard right
             now, whether they&apos;re struggling to attend, or they&apos;re
             there every day but lacking confidence or unable to access their
