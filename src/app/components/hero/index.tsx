@@ -28,19 +28,14 @@ export default function Hero() {
       <div className="md:pt-14 relative z-10 flex flex-col gap-8 md:gap-9 items-center text-center max-w-5xl">
         <div className="flex flex-col items-center gap-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance max-w-4xl">
-            Redesigning education for neurodivergent children and the families
-            who love them.
+            Redesigning Learning
           </h1>
 
           <p className={`${styles.mainSubTitle} max-w-3xl`}>
-            Every family deserves an education path that works for them. We
-            work with children who are finding school really hard right now,
-            whether they&apos;re struggling to attend, or they&apos;re there
-            every day but lacking confidence or unable to access their
-            learning. It isn&apos;t because they&apos;re not trying. Through
-            tutoring, coaching, flexi-schooling and home education, our
-            Connect-Ed Method helps them feel safe first, so they can believe
-            in themselves and learn again.
+            We work with children who are finding school really hard right
+            now, whether they&apos;re struggling to attend, or they&apos;re
+            there every day but lacking confidence or unable to access their
+            learning. It isn&apos;t because they&apos;re not trying.
           </p>
         </div>
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import YouTubeVideo from "../../../components/youtubevideo";
+// import YouTubeVideo from "../../../components/youtubevideo"; // Hidden for now, not deleted.
 import ValueCard from "./valuecard";
 import { valuesData } from "./valuecard/valuesData";
 
@@ -17,11 +17,12 @@ export default function RootsAndWingsValues() {
       <div className="container flex flex-col gap-md items-center">
         <h2>Our Roots & Wings Values</h2>
         <div className="flex flex-col items-center justify-center gap-md xl:gap-xl">
-          <div className="flex gap-sm justify-center flex-wrap xl:flex-nowrap">
+          <div className="flex gap-md justify-center flex-wrap xl:flex-nowrap">
             {valuesData.map((value) => (
               <ValueCard key={value.title} {...value} />
             ))}
           </div>
+          {/* Hidden for now, not deleted.
           <div className="flex flex-col gap-xs items-center">
             <div style={{ width: "100%" }}>
               <YouTubeVideo />
@@ -30,6 +31,7 @@ export default function RootsAndWingsValues() {
               Our idea Sprout, Ally.
             </span>
           </div>
+          */}
         </div>
       </div>
     </div>

@@ -480,6 +480,8 @@ p {
 
 .values-card {
   padding: 2rem;
+  width: 300px;
+  max-width: 100%;
 }
 
 /* MEDIA QUERIES */
