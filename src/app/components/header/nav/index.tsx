@@ -55,8 +55,11 @@ export default function Nav({ isNavOpen, setIsNavOpen }: NavProps) {
           {isDropdownVisible && (
             <ul className={styles.dropdownMenu}>
               <li className={styles.dropdownItem}>
-                <Link href="/our-programme#" className={styles.navLink}>
-                  Programme Structure
+                <Link
+                  href="/our-programme#how-it-works"
+                  className={styles.navLink}
+                >
+                  How It Works
                 </Link>
               </li>
               <li className={styles.dropdownItem}>
@@ -64,12 +67,12 @@ export default function Nav({ isNavOpen, setIsNavOpen }: NavProps) {
                   href="/our-programme#our-method"
                   className={styles.navLink}
                 >
-                  Our Method
+                  Our Services
                 </Link>
               </li>
               <li className={styles.dropdownItem}>
-                <Link href="/our-programme#pricing" className={styles.navLink}>
-                  Pricing
+                <Link href="/our-programme#faq" className={styles.navLink}>
+                  FAQs
                 </Link>
               </li>
             </ul>

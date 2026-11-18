@@ -21,13 +21,13 @@ export const metadata: Metadata = {
 export default function OurProgramme() {
   return (
     <>
-      <section className="pt-sm md:pt-xl">
+      <section className="pt-sm md:pt-xl" id="how-it-works">
         <YourJourney />
       </section>
       <section id="our-method">
         <UnveilTheMagic />
       </section>
-      <section id="pricing">
+      <section id="faq">
         {/* <Pricing /> — hidden for now, replaced by Faq below. Not deleted. */}
         <Faq />
         <CTA />
